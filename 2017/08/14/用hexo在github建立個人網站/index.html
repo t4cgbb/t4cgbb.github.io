@@ -7,7 +7,7 @@
 
     
 
-    <title>哈囉世界 | t4學習路程！</title>
+    <title>用hexo在github建立個人網站 | t4學習路程！</title>
     <meta name="author" content="t4cgbb">
     
     <meta name="description" content="HTML、CSS、PHP、MYSQL等學習資料記錄。">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="哈囉世界"/>
+    <meta property="og:title" content="用hexo在github建立個人網站"/>
     <meta property="og:site_name" content="各式學習記錄Blog！"/>
 
     
@@ -171,8 +171,8 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/css3/">
-                    css3 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/hexo-github-網路知識/">
+                    hexo-github-網路知識 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -208,7 +208,7 @@
             
     
     
-    <a class="breadcrumb" href="/categories/css3/">css3</a>
+    <a class="breadcrumb" href="/categories/hexo-github-網路知識/">hexo,github,網路知識</a>
 
 
         
@@ -225,12 +225,12 @@
             <div class="article-title">
                 
     
-        <h1>哈囉世界</h1>
+        <h1>用hexo在github建立個人網站</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2017-08-12T16:00:00.000Z"><a href="/2017/08/13/哈囉世界/">2017-08-13</a></time>
+            <time class="pink-link-context" datetime="2017-08-13T16:00:00.000Z"><a href="/2017/08/14/用hexo在github建立個人網站/">2017-08-14</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -240,27 +240,89 @@
             
     <div class="tags-row">
         
-            <a href="/tags/Hexo/" class="chip pink lighten-1">Hexo</a>
+            <a href="/tags/Hexo-github/" class="chip pink lighten-1">Hexo,github</a>
         
     </div>
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Quick-Start"><span class="section table-of-contents-text">Quick Start</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Create-a-new-post"><span class="section table-of-contents-text">Create a new post</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Run-server"><span class="section table-of-contents-text">Run server</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Generate-static-files"><span class="section table-of-contents-text">Generate static files</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Deploy-to-remote-sites"><span class="section table-of-contents-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第一步驟：準備好你的github"><span class="section table-of-contents-text">第一步驟：準備好你的github</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第二步驟：hexo的安裝"><span class="section table-of-contents-text">第二步驟：hexo的安裝</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第三步驟：將hexo上傳github"><span class="section table-of-contents-text">第三步驟：將hexo上傳github</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第四步驟：申請域名綁定域名！（自行選配）"><span class="section table-of-contents-text">第四步驟：申請域名綁定域名！（自行選配）</span></a></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+                <p>簡單介紹架設Hexo在Github的教程！</p>
+<ul>
+<li>第一步驟：準備好你的github及環境配置</li>
+</ul>
+<ul>
+<li>第二步驟：hexo的安裝</li>
+</ul>
+<ul>
+<li>第三步驟：將hexo上傳github</li>
+</ul>
+<ul>
+<li>第四步驟：申請域名綁定域名！（自行選配）</li>
+</ul>
 <a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h2 id="第一步驟：準備好你的github"><a href="#第一步驟：準備好你的github" class="headerlink" title="第一步驟：準備好你的github"></a>第一步驟：準備好你的github</h2><p>### </p>
+<p>1.先到官網將帳號註冊完畢，點選右上角的+號選擇New repository。</p>
+<p>2.因為要做個人站點，按官方github說明文件，我們必須取「你的帳號名稱」.github.io**的格式。</p>
+<p>3.安裝<a href="https://git-scm.com/download/win" target="_blank" rel="external">git</a>（主要是為了上傳站點，還有每次如果修改好hexo檔案後，所必須具備的軟體），下載下來並安裝。</p>
+<p>4.安裝成功後，可在cmd畫面查看。</p>
+<p><img src="https://i.gyazo.com/ac5ffa585824ffa7eb1f532ce6e13bf9.png" alt="git安裝成功"></p>
+<p>5.接下來使用git來配置github的帳戶與密碼：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;你的github用戶名&quot;</div><div class="line">git config --global user.email &quot;你的github註冊郵箱&quot;</div></pre></td></tr></table></figure>
+<p>6.生成ssh密鑰文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"你的github註冊郵箱"</span></div></pre></td></tr></table></figure>
+<p><img src="https://i.gyazo.com/e2dc9868b00de29c8d3ea14cd75ca765.png" alt="生成公鑰圖"></p>
+<p>7.打開<a href="http://link.zhihu.com/?target=https%3A//github.com/settings/keys" target="_blank" rel="external">GitHub_Settings_keys</a>頁面 ，新建new SSH Key，將id_rsa.pub的內容黏貼到key裡頭。</p>
+<p><img src="https://i.gyazo.com/b3c978b27ac5427918f34e39a67b16e0.png" alt="KEY"></p>
+<p>8.設定成功後，會出下如下畫面，這樣以後跟github做連接，概念如圖二，在自己本地電腦生成一對公鑰跟私鑰，公鑰傳給github，當要連接過去的時候，github上面的公鑰會與你電腦上的私鑰匹配，若是正確則連接。</p>
+<p><img src="https://i.gyazo.com/c209f37eb94b78dc38f54a12a6fcaa91.png" alt="ssh登入成功"></p>
+<p><img src="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/figs/ssh_0202.gif" alt="ssh概念圖"></p>
+<p>9.安裝<a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js</a>,安裝完畢後，輸入node -v查看是否安裝成功，看見版本號後就大功告成！</p>
+<h2 id="第二步驟：hexo的安裝"><a href="#第二步驟：hexo的安裝" class="headerlink" title="第二步驟：hexo的安裝"></a>第二步驟：hexo的安裝</h2><p>### </p>
+<p>1.先創建一個資料夾（你站點的位置想放哪就創哪），創建完畢後開啟cmd，移到那個資料夾，輸入以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<p>2.接著初始化站點（就是會把一些基本設置寫進你的自訂資料夾裡）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init [自定資料夾名字]</div></pre></td></tr></table></figure>
+<p>3.建立一篇新文章</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;  //格式</div><div class="line">hexo new test  //我們建立打這樣，使用預設的樣版。</div></pre></td></tr></table></figure>
+<p>4.產生靜態檔案（兩個指令都可，一個全寫、一個簡稱）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo g</div></pre></td></tr></table></figure>
+<p>5.在本機上啟動服務器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo server</div><div class="line">hexo s</div></pre></td></tr></table></figure>
+<p>6.輸入localhost:4000就可以看見站點了！</p>
+<p><img src="http://r12f-cdn.azureedge.net/r12f-assets/post_assets/2017-02-05-building-blog-with-hexo-and-github-pages/hexo-first-blog.png" alt="hexo index"></p>
+<p>hexo一些常用的指令可以到<a href="https://hexo.io/zh-tw/docs/commands.html" target="_blank" rel="external">官網</a>去看，像是hexo如果升級了指令怎麼打，如何清除快取檔，創建新文章等等……</p>
+<h2 id="第三步驟：將hexo上傳github"><a href="#第三步驟：將hexo上傳github" class="headerlink" title="第三步驟：將hexo上傳github"></a>第三步驟：將hexo上傳github</h2><p>### </p>
+<p>1.根資料夾下（不是theme裡面的，那個是主題配置）找到_config.yml的站點配置文件，以文本方式開啟即可。</p>
+<p>2.開啟後，搜尋deploy，修改如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: 填寫你的github的網址</div><div class="line">branch: master	//「你的帳號名稱」.github.io這種格式只能在master發佈</div><div class="line">message: 自定義你的提交訊息(預設是 Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;)</div></pre></td></tr></table></figure>
+<p>3.再來安裝hexo-deployer-git（這是github才要裝的，像是hereku那些又是另外插件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>4.分別輸入以下三條指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean		//這是清除db.json（快取檔案）跟已經生成的靜態檔案（public)</div><div class="line">hexo g			//生成靜態檔案</div><div class="line">hexo d			//部署到你剛剛文檔設定的伺服器上</div></pre></td></tr></table></figure>
+<p>5.部署成功！</p>
+<p><img src="https://i.gyazo.com/2d1f2607e6662d343987806444603774.png" alt="hexo部署成功"></p>
+<p>6.請輸入<strong>「你的帳號名稱」.github.io</strong>，沒有意外的話就會出現你的站點首頁了！</p>
+<h2 id="第四步驟：申請域名綁定域名！（自行選配）"><a href="#第四步驟：申請域名綁定域名！（自行選配）" class="headerlink" title="第四步驟：申請域名綁定域名！（自行選配）"></a>第四步驟：申請域名綁定域名！（自行選配）</h2><p>### </p>
+<p>1.這邊介紹<a href="https://tw.godaddy.com/" target="_blank" rel="external">GoDaddy</a>，購買域名是必須花錢的，不過可以嘗試買一個一年的域名來試試看，大概就一杯珍奶還有找的價格。</p>
+<p><img src="http://www.webbuildersguide.com/wp-content/uploads/godaddy_review/1.jpg" alt=""></p>
+<p>2.註冊會員後，直接輸入自己想要的域名，就可以加入購物車購買了，不過結帳時請記得去找<a href="https://www.dute.me/" target="_blank" rel="external">優惠卷</a>，會省下不少錢的！</p>
+<p><img src="https://i.gyazo.com/51c170f1e868dcd4095247b1ffff8ad2.png" alt=""></p>
+<p>3.購買完域名後，就開始設定DNS，解析如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@          A             192.30.252.153</div><div class="line">@          A             192.30.252.154</div><div class="line">www      CNAME    username.github.io.</div></pre></td></tr></table></figure>
+<p>（若是有更改，可在官方github的<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">page頁面說明</a>中查詢）</p>
+<p>4.然後這時要在去Github網站中，點選settings（齒輪圖案），之後進到頁面往下拉，設定自定義域名並儲存。</p>
+<p><img src="https://i.gyazo.com/6999521693ccb1eefa6b3d247dfd306e.png" alt="domain設定"></p>
+<p>5.在站點下資料夾裡的source目錄中，創建一個CNAME的文檔，裡頭填上自己申請的域名，並保存為<strong>所有文件</strong>，如下，<a href="http://wiki.jikexueyuan.com/project/github-pages-basics/cname-file.html" target="_blank" rel="external">可至此參考</a>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">t4cgbb.space</div></pre></td></tr></table></figure>
+<p>4.配置完成後，需重新上傳站點，一樣三個指令，未來會常常用到的！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean		</div><div class="line">hexo g			</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>5.如果出現憑證問題，可以去尋找免費的SSL憑證來代管網域，比如<a href="https://www.cloudflare.com/" target="_blank" rel="external">CLOUDFLARE</a>等。</p>
+<p>6.大功告成！</p>
 
                 
 
