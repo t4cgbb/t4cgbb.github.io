@@ -18,11 +18,12 @@
 <p><br><br>DNS，嗯，如果要講的累贅一點，首先就是copy一段：</p>
 <p>網域名稱系統（英文：Domain Name System，縮寫：<strong>DNS</strong>）是網際網路的一項服務。 它作為將域名和IP位址相互對映的一個分散式資料庫，能夠使人更方便地存取網際網路。<br><br><br><strong>請問各位瞭解了嗎？</strong></p>
 <p><br></p>
-<p>如果想更瞭解資料庫，可以看看我大學整理的筆記如下：</p>
+<p>打開自己大二時期整理的資料庫重點：</p>
 <p><img src="http://imgur.com/kx9r03S.png" alt="資料庫設計"></p>
 <p><strong>窩擦！這到底是什麼鬼？請問大大是在裝B嗎？</strong></p>
 <p><br></p>
-<p>其實我只想跟在場的各位說，你們都是正常人！只要是正常人沒有接觸這塊的人，看不懂是很合理的，如果你看得懂又沒接觸這塊，代表你天賦異稟，請趕快去外星人研究中心！</p>
+<p>不、其實我剛才一打開，還真完全看不懂這是什麼東西，愣了一會兒才知道他是什麼東西，反正有興趣要把資料庫基本知識補齊的，就去把這些文謅謅的知識補一補吧！</p>
+<p>記得補完最好做個知識連接啦！不然很快就會忘記它到底是什麼。</p>
 <p><br></p>
 <p>好了回歸正題，DNS給你們一個印象，如果第一次接觸它，是這樣的東西：</p>
 <ul>
@@ -42,7 +43,7 @@
 <p>接觸過網路的人都明白IP Address，一般來說網路連接是透過Network layer來定位IP Address，所以<strong>直接輸入網址什麼的，就必須透過DNS來轉換啦！</strong></p>
 <p>有人可能會問，那為什麼我在自家弄了個私有網站時，可以透過localhsot來看到頁面，這個能從本機的hosts文檔中看到127.0.0.1對應到localhost，可以測試看看輸入一組IP對應到一些知名網站試試看，網站立刻就連不上了。</p>
 <p>這個可以模擬成沒有DNS的環境就是這樣啦！因為在找DNS之前，會先去找hosts的文檔！</p>
-<p><br><br><strong>言而總之，DNS就是幫你解析域名（<a href="https://t4cgbb.space/2017/08/14/%E7%94%A8hexo%E5%9C%A8github%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" target="_blank" rel="external">申請域名請看這</a>）的一個東東就是啦！</strong><br><br></p>
+<p><br><br><strong>言而總之，DNS就是幫你解析域名（<a href="https://t4cgbb.space/2017/08/14/%E7%94%A8hexo%E5%9C%A8github%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" target="_blank" rel="external">申請域名請點我</a>）的一個東東就是啦！</strong><br><br></p>
 <hr>
 <h2 id="第二步驟：DNS的運作方式？"><a href="#第二步驟：DNS的運作方式？" class="headerlink" title="第二步驟：DNS的運作方式？"></a>第二步驟：DNS的運作方式？</h2><hr>
 <p><br><br><img src="http://i.imgur.com/EnQJs7r.jpg" alt="DNS運作"></p>
