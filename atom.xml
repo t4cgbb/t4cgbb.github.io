@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-20T08:03:05.111Z</updated>
+  <updated>2017-08-25T12:16:56.093Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript～this的四大類！</title>
+    <link href="http://yoursite.com/2017/08/25/JS_this/"/>
+    <id>http://yoursite.com/2017/08/25/JS_this/</id>
+    <published>2017-08-25T12:10:13.000Z</published>
+    <updated>2017-08-25T12:16:56.093Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript～this的四大類！"><a href="#JavaScript～this的四大類！" class="headerlink" title="JavaScript～this的四大類！"></a>JavaScript～this的四大類！</h1><ul>
+<li>this調用四種！</li>
+</ul>
+<p>JavaScript的this到底要怎麼看呢？方法諸多，奇行怪樣！</p>
+<p><strong>時刻把握住一個重點，那就是永遠指向它的上一層即可！</strong></p>
+<p>this大致上可以分成以下四種方法ヽ(●´∀`●)ﾉ</p>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h2 id="全局變數"><a href="#全局變數" class="headerlink" title="全局變數"></a>全局變數</h2><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this;  //指向上一層，因為是在JS瀏覽器中運行，所以全局對象是window。</div></pre></td></tr></table></figure>
+<p><br></p>
+<hr>
+<h2 id="函數調用"><a href="#函數調用" class="headerlink" title="函數調用"></a>函數調用</h2><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">test();  	//this同樣會指向全局對象windows</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var a = 5;</div><div class="line">function test()&#123;</div><div class="line">  console.log(a);</div><div class="line">&#125;</div><div class="line">test();			// this指向全局變數 output 5</div></pre></td></tr></table></figure>
+<p><br></p>
+<hr>
+<h2 id="方法調用"><a href="#方法調用" class="headerlink" title="方法調用"></a>方法調用</h2><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">obj.test();		//this會指向obj</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function test()&#123;</div><div class="line">  var a = 10;</div><div class="line">  console.log(this.a);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var obj = &#123;</div><div class="line">  a:2,</div><div class="line">  test:test</div><div class="line">&#125;;</div><div class="line"></div><div class="line">obj.test();		//this指向obj裡面的a output 2</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function test()&#123;</div><div class="line">  var a = 10;</div><div class="line">  console.log(this.a);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var obj1 = &#123;</div><div class="line">  a:50,</div><div class="line">  test:test</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var obj = &#123;</div><div class="line">  a:2,</div><div class="line">  obj1:obj1</div><div class="line">&#125;;</div><div class="line"></div><div class="line">obj.obj1.test();	//this指向obj1的a output 50</div></pre></td></tr></table></figure>
+<p><br></p>
+<hr>
+<h2 id="建立物件"><a href="#建立物件" class="headerlink" title="建立物件"></a>建立物件</h2><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new test();		//如果使用new，則this會指向新創建的物件。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var a = 3;</div><div class="line"></div><div class="line">function test(a)&#123;</div><div class="line">  this.a = a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var _result = new test(2);</div><div class="line">console.log(_result.a);		//this指向新物件的a而非全局對象。</div></pre></td></tr></table></figure>
+<p><br></p>
+<hr>
+<h2 id="Apply綁定（硬約束）"><a href="#Apply綁定（硬約束）" class="headerlink" title="Apply綁定（硬約束）"></a>Apply綁定（硬約束）</h2><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function test(something)&#123;</div><div class="line">  console.log(this.a, something );			//output 2 3</div><div class="line">  return this.a + something;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var obj = &#123;</div><div class="line">  a:2</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var bar = function()&#123;</div><div class="line">  return test.apply(obj, arguments);    //arguemnts類陣列</div><div class="line">&#125;</div><div class="line"></div><div class="line">var b = bar(3);</div><div class="line">console.log(test.call(obj,10));		//ouput 2 10</div><div class="line">console.log(b);						//output 5</div><div class="line"></div><div class="line">/* apply跟call差異在apply只要帶入一個陣列，call則必須逐一帶入！*/</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JavaScript～this的四大類！&quot;&gt;&lt;a href=&quot;#JavaScript～this的四大類！&quot; class=&quot;headerlink&quot; title=&quot;JavaScript～this的四大類！&quot;&gt;&lt;/a&gt;JavaScript～this的四大類！&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;this調用四種！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JavaScript的this到底要怎麼看呢？方法諸多，奇行怪樣！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;時刻把握住一個重點，那就是永遠指向它的上一層即可！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;this大致上可以分成以下四種方法ヽ(●´∀`●)ﾉ&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Javascript" scheme="http://yoursite.com/categories/Javascript/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>組裝電腦需知！軟硬體常識大匯集！</title>
