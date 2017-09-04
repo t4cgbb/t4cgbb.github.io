@@ -7,7 +7,7 @@
 
     
 
-    <title>彙整：2017 | t4學習路程！</title>
+    <title>WAMP架設指南 | t4學習路程！</title>
     <meta name="author" content="t4cgbb">
     
     <meta name="description" content="HTML、CSS、PHP、MYSQL等學習資料記錄。">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="WAMP架設指南"/>
     <meta property="og:site_name" content="各式學習記錄Blog！"/>
 
     
@@ -233,64 +233,179 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper red">
-        <span class="breadcrumb">當前位置（彙整）</span>
+        <span class="breadcrumb">當前位置（分類目錄）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/網站相關/">網站相關</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>WAMP架設指南</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2017-09-04T15:10:13.000Z"><a href="/2017/09/04/WAMP架設指南/">2017-09-04</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/mysql/" class="chip pink lighten-1">mysql</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2017
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2017/09/04/WAMP架設指南/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-09-04T15:10:13.000Z">2017-09-04</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                WAMP架設指南
-                            </a>
-                        
-                            <a href="/2017/08/25/JS_this/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-08-25T12:10:13.000Z">2017-08-25</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                JavaScript～this的四大類！
-                            </a>
-                        
-                            <a href="/2017/08/20/組裝電腦需知！軟硬體常識大匯集！/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-08-20T07:55:15.000Z">2017-08-20</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                組裝電腦需知！軟硬體常識大匯集！
-                            </a>
-                        
-                            <a href="/2017/08/15/淺談DNS到底是什麼！/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-08-15T05:19:41.000Z">2017-08-15</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                淺談DNS到底是什麼！
-                            </a>
-                        
-                            <a href="/2017/08/14/用hexo在github建立個人網站/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-08-13T16:00:00.000Z">2017-08-14</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                用hexo在github建立個人網站
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/php/" class="chip pink lighten-1">php</a>
         
-    </ul>
+            <a href="/tags/apache/" class="chip pink lighten-1">apache</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#WAMP架設指南"><span class="section table-of-contents-text">WAMP架設指南</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#A：Apache環境架設"><span class="section table-of-contents-text">A：Apache環境架設</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#P：PHP環境架設"><span class="section table-of-contents-text">P：PHP環境架設</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#M：MYSQL環境架設"><span class="section table-of-contents-text">M：MYSQL環境架設</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#疑難雜症"><span class="section table-of-contents-text">疑難雜症</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="WAMP架設指南"><a href="#WAMP架設指南" class="headerlink" title="WAMP架設指南"></a>WAMP架設指南</h1><p>本篇介紹apache2.4.27 + PHP7.19 + Mysql5.7.19 在Windows10底下應該如何配置的教學！</p>
+<p><img src="http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png" alt="WAMP輕鬆學會架設網頁伺服器"></p>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h2 id="A：Apache環境架設"><a href="#A：Apache環境架設" class="headerlink" title="A：Apache環境架設"></a>A：Apache環境架設</h2><hr>
+<p>1.首先來到主畫面，可以看到包含Apache在內有許多的集成軟體可以使用，不過這邊因為要單獨架設，所以請選擇Apache Lounge。</p>
+<p><img src="http://i.imgur.com/cRheDXt.png" alt="apache主頁面"></p>
+<p>2.這邊就可以針對自己的windows來下載apcahe！</p>
+<p><img src="https://imgur.com/2ePfbbX.jpg" alt=""></p>
+<p>3.解壓後如下圖！</p>
+<p><img src="https://imgur.com/vst9OPi.png" alt=""></p>
+<p>4.打開conf裡的httpd.conf，開始我們的設定啦！</p>
+<p>5.必須設定如下：</p>
+<p>（一）ServerRoot（apache目錄）</p>
+<p>（二）ServerName（服務器名稱）</p>
+<p>（三）DocumentRoot（修改網站根目錄地址）自行設置，通常會設置在apache目錄裡的htdocs</p>
+<p>（四）Directory（網站根目錄位址，通常拿來設定權限使用）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;Directory &quot;****\htdocs&quot;&gt;</div><div class="line">Options Indexs FollowSymLinks	//如果目錄下找不到首頁檔案（預設index.html）則顯示整個目錄下檔案名稱</div><div class="line">AllowOverride None	//字面意思允許覆寫 參數：all:全部、AuthConfig：認證可None：不可覆寫.htacces失效</div><div class="line">Require all granted //允許所有存取（=order allow, deny   Allow from all）</div><div class="line">&lt;/Directory&gt;</div></pre></td></tr></table></figure>
+<p>(五)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ScriptAlias /cgi-bin/ &quot;c:/Apache24/cgi-bin/&quot;		\\在使用cgi-bin時，指向後面真實路徑</div><div class="line"></div><div class="line">&lt;Directory &quot;c:/Apache24/cgi-bin&quot;&gt;					\\設定權限</div><div class="line">    AllowOverride None</div><div class="line">    Options None</div><div class="line">    Require all granted</div><div class="line">&lt;/Directory&gt;</div></pre></td></tr></table></figure>
+<p>6.配置完畢後，輸入httpd -t，可驗證conf是否有錯誤。</p>
+<p>httpd.exe -k install -n apache（安裝服務，叫做apache）</p>
+<p>httpd.exe -k uninstall（）</p>
+<p><img src="https://imgur.com/A165V5j.png" alt=""></p>
+<p>7.安裝服務：httpd.exe -k install    ，下圖即配置成功，如果要自己改名記得加個-n就行了            （卸載服務為httpd.exe -k uninstall）</p>
+<p><img src="https://imgur.com/VnMHb9i.png" alt=""></p>
+<p>如果出現如下端口佔用的情況</p>
+<p><img src="https://pic3.zhimg.com/v2-d14df0ddec58f6e62bcfbaf68c27a4f6_r.png" alt=""></p>
+<p>有兩種解決方法：</p>
+<p>1.在httpd.conf裡找到Listen 80改為其他端口。</p>
+<p>2.在dos輸入命令netstat -ano  查看佔用端口，然後使用taskkill -f -t -im  程序名  結束掉它。</p>
+<p>8.啟動服務：httpd.exe -k start （停止服務是stop 重啟是restart）</p>
+<p>（這邊補充一下服務的六大口訣：安裝、啟動、開機啟動、防火牆、測試、上傳資料，基本上若服務有問題從中就能解決了。）</p>
+<p>9.Apache環境設定成功啦！</p>
+<p><img src="https://imgur.com/arsHb5q.png" alt=""></p>
+<p><br></p>
+<hr>
+<h2 id="P：PHP環境架設"><a href="#P：PHP環境架設" class="headerlink" title="P：PHP環境架設"></a>P：PHP環境架設</h2><hr>
+<p>1.從官方下載PHP。</p>
+<p><img src="https://imgur.com/plCjnU4.png" alt=""></p>
+<p>2.一般來說Apache環境下的PHP會選擇Thread Safe（簡稱：TS版）來架設。</p>
+<p>3.解壓後，開啟apache的httpd.conf在最下面配置這四條：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">AddHandler application/x-httpd-php .php	</div><div class="line">AddType application/x-httpd-php .php .html .htm						//檔案名、若無則.php不會run</div><div class="line">LoadModule php7_module &quot;D:\softeware\code\web server\php\php7apache2_4.dll&quot;	載入php7模塊</div><div class="line">PHPIniDir &quot;D:\softeware\code\web server\php&quot;	若有配置php.ini則載入</div></pre></td></tr></table></figure>
+<p>4.寫一段php的code</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">phpinfo();</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<p>5.php配置成功！</p>
+<p><img src="https://imgur.com/f5IQcf3.png" alt=""></p>
+<p><br></p>
+<hr>
+<h2 id="M：MYSQL環境架設"><a href="#M：MYSQL環境架設" class="headerlink" title="M：MYSQL環境架設"></a>M：MYSQL環境架設</h2><hr>
+<p>1.首先到官方下載Mysql。</p>
+<p><img src="https://imgur.com/HKYxgXT.png" alt=""></p>
+<p>2.再完成mysql安裝後（請自行依照需求安裝），我們要配置php的設置，大致上就如下圖</p>
+<p><img src="https://cdn.lynda.com/courses/362875-635573449041298772_338x600_thumb.jpg" alt=""></p>
+<p>與php相關的我們配置apache的httpd.conf，與sql相關的我們則配置php的設置。</p>
+<p>3.複製php.ini-development，貼上後改名為php.ini。</p>
+<p>4.將extension_dir=”ext”#拿掉，並修改解壓後php中ext的路徑位置。</p>
+<p>5.將#extension=php_mysql.dll的#拿掉。</p>
+<p>6.配置完成！</p>
+<p>7.開始測試！首先開啟Mysql5.7 Command Line Client！</p>
+<p>8.登入後，創建資料庫 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create database　【資料庫名字】</div></pre></td></tr></table></figure>
+<p>9.選擇資料庫。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">use 【資料庫名字】</div></pre></td></tr></table></figure>
+<p>10.創建資料表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">create table test(</div><div class="line">name char(10),</div><div class="line">time datetime</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>11.查詢是否新建成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from test;</div></pre></td></tr></table></figure>
+<p>12撰寫php</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">	$connection = mysqli_connect(&apos;localhost&apos;,&apos;root&apos;,&apos;root&apos;,&apos;testDB&apos;)</div><div class="line">		or die(&apos;開啟失敗！&apos;);</div><div class="line">		</div><div class="line">	$result = mysqli_query($connection,&quot;select * from test&quot;)</div><div class="line">		or die (&apos;sql指令錯誤！&apos;);</div><div class="line">		</div><div class="line">	while($row = mysqli_fetch_array($result))&#123;</div><div class="line">		echo $row[0]; ?&gt;&lt;br&gt;&lt;?php</div><div class="line">		echo $row[1];</div><div class="line">	&#125;</div><div class="line">		</div><div class="line">	mysqli_close($connection);</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<p>13.畫面顯示出來，代表php配置無誤！</p>
+<p><img src="https://i.imgur.com/8EWAmWF.png" alt=""></p>
+<p><br></p>
+<hr>
+<h2 id="疑難雜症"><a href="#疑難雜症" class="headerlink" title="疑難雜症"></a>疑難雜症</h2><hr>
+<p>Q1：</p>
+<p><img src="https://pic4.zhimg.com/v2-bf593ff3824b36072cdcbc6a7544bb1f_b.png" alt="img"></p>
+<p>回答：需要安裝c++2015及其他相關套件，安裝即可解決問題。</p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2017/08/25/JS_this/" rel="next" title="JavaScript～this的四大類！">
+    下一篇：JavaScript～this的四大類！core
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function() {
+                this.page.url = 'http://yoursite.com/2017/09/04/WAMP架設指南/';
+                this.page.identifier = '2017/09/04/WAMP架設指南/';
+            };
+            (function() {
+                var d = document,
+                    s = d.createElement('script');
+                s.src = '//t4xue-xi-lu-cheng.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+        </noscript>
+    </section>
+
 
 
 </div>
