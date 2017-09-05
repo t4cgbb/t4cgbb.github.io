@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-05T12:08:55.258Z</updated>
+  <updated>2017-09-05T14:52:14.576Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ATOM好用的插件Php-Debug【Windows】</title>
+    <link href="http://yoursite.com/2017/09/05/ATOM%E8%88%87php_debug%E8%88%87Xdbug/"/>
+    <id>http://yoursite.com/2017/09/05/ATOM與php_debug與Xdbug/</id>
+    <published>2017-09-05T14:10:13.000Z</published>
+    <updated>2017-09-05T14:52:14.576Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ATOM好用的插件Php-Debug【Windows】"><a href="#ATOM好用的插件Php-Debug【Windows】" class="headerlink" title="ATOM好用的插件Php-Debug【Windows】"></a>ATOM好用的插件Php-Debug【Windows】</h1><p>今天給大家介紹一個Atom上好用的插件！</p>
+<p>可以有效幫助開發者在PHP開發環境下，輕鬆Debug啦！從此告別註解！</p>
+<p>以下兩步驟，立刻設定好debug的環境哦！</p>
+<ul>
+<li>第一步驟：安裝配置xdebug</li>
+</ul>
+<ul>
+<li>第二步驟：安裝php-debug</li>
+</ul>
+<p>!WAMP輕鬆學會架設網頁伺服器](<a href="http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png" target="_blank" rel="external">http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png</a>)</p>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h2 id="第一步驟：安裝配置xdebug"><a href="#第一步驟：安裝配置xdebug" class="headerlink" title="第一步驟：安裝配置xdebug"></a>第一步驟：安裝配置xdebug</h2><hr>
+<p>1.先到XDEBUG的官方網站來下載！看你php搭配環境是IIS還是Apache去挑選是TS或非TS。</p>
+<p><img src="https://imgur.com/mRMjvXJ.png" alt=""></p>
+<p>2.下載完畢後，將dll檔扔進php目錄裡的ext目錄裡。</p>
+<p>3.在php.ini文檔裡頭寫下如下（附上官方說明：<a href="https://xdebug.org/docs/install）" target="_blank" rel="external">https://xdebug.org/docs/install）</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zend_extension=&quot;路徑/xdebug檔名&quot;</div></pre></td></tr></table></figure>
+<p>4.大功告成啦！重啟後看看php的info裡面有沒有xdebug的模塊就行啦！</p>
+<p><br></p>
+<hr>
+<h2 id="第二步驟：安裝php-debug"><a href="#第二步驟：安裝php-debug" class="headerlink" title="第二步驟：安裝php-debug"></a>第二步驟：安裝php-debug</h2><hr>
+<p>1.打開Atom，安裝php-debug的插件。</p>
+<p>2.安裝完畢後，配置參數，請在php.ini裡添加如下配置（說明文檔：<a href="https://atom.io/packages/php-debug）" target="_blank" rel="external">https://atom.io/packages/php-debug）</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xdebug]  </div><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_host=127.0.0.1</div><div class="line">xdebug.remote_connect_back=1    # Not safe for production servers</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=dbgp</div><div class="line">xdebug.remote_mode=req</div><div class="line">xdebug.remote_autostart=true</div></pre></td></tr></table></figure>
+<p>2.設置好後，重啟Apache，並打開Atom，基本上就能使用Debug的功能了！</p>
+<p><img src="https://imgur.com/g5nfljP.png" alt=""></p>
+<p>如果無法使用，請查看port是否被其他東西佔用（比如你多開了瀏覽器，而且都跑到127.0.0.1等各式奇怪狀況），最佳方法便是重開機，再用netstat查看，基本上就能成功啦！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ATOM好用的插件Php-Debug【Windows】&quot;&gt;&lt;a href=&quot;#ATOM好用的插件Php-Debug【Windows】&quot; class=&quot;headerlink&quot; title=&quot;ATOM好用的插件Php-Debug【Windows】&quot;&gt;&lt;/a&gt;ATOM好用的插件Php-Debug【Windows】&lt;/h1&gt;&lt;p&gt;今天給大家介紹一個Atom上好用的插件！&lt;/p&gt;
+&lt;p&gt;可以有效幫助開發者在PHP開發環境下，輕鬆Debug啦！從此告別註解！&lt;/p&gt;
+&lt;p&gt;以下兩步驟，立刻設定好debug的環境哦！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一步驟：安裝配置xdebug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;第二步驟：安裝php-debug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;!WAMP輕鬆學會架設網頁伺服器](&lt;a href=&quot;http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png&lt;/a&gt;)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://yoursite.com/categories/PHP/"/>
+    
+    
+      <category term="debug" scheme="http://yoursite.com/tags/debug/"/>
+    
+  </entry>
   
   <entry>
     <title>WAMP架設指南</title>

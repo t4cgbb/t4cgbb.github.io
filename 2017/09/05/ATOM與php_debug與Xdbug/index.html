@@ -7,7 +7,7 @@
 
     
 
-    <title>電腦硬體 | t4學習路程！</title>
+    <title>ATOM好用的插件Php-Debug【Windows】 | t4學習路程！</title>
     <meta name="author" content="t4cgbb">
     
     <meta name="description" content="HTML、CSS、PHP、MYSQL等學習資料記錄。">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="ATOM好用的插件Php-Debug【Windows】"/>
     <meta property="og:site_name" content="各式學習記錄Blog！"/>
 
     
@@ -241,30 +241,125 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper red">
         <span class="breadcrumb">當前位置（分類目錄）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/PHP/">PHP</a>
+
 
         
-            <a class="breadcrumb" href="/categories/電腦硬體/">電腦硬體</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>ATOM好用的插件Php-Debug【Windows】</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2017-09-05T14:10:13.000Z"><a href="/2017/09/05/ATOM與php_debug與Xdbug/">2017-09-05</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2017/08/20/組裝電腦需知！軟硬體常識大匯集！/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-08-20T07:55:15.000Z">2017-08-20</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                組裝電腦需知！軟硬體常識大匯集！
-            </a>
+            <a href="/tags/debug/" class="chip pink lighten-1">debug</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#ATOM好用的插件Php-Debug【Windows】"><span class="section table-of-contents-text">ATOM好用的插件Php-Debug【Windows】</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第一步驟：安裝配置xdebug"><span class="section table-of-contents-text">第一步驟：安裝配置xdebug</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第二步驟：安裝php-debug"><span class="section table-of-contents-text">第二步驟：安裝php-debug</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="ATOM好用的插件Php-Debug【Windows】"><a href="#ATOM好用的插件Php-Debug【Windows】" class="headerlink" title="ATOM好用的插件Php-Debug【Windows】"></a>ATOM好用的插件Php-Debug【Windows】</h1><p>今天給大家介紹一個Atom上好用的插件！</p>
+<p>可以有效幫助開發者在PHP開發環境下，輕鬆Debug啦！從此告別註解！</p>
+<p>以下兩步驟，立刻設定好debug的環境哦！</p>
+<ul>
+<li>第一步驟：安裝配置xdebug</li>
+</ul>
+<ul>
+<li>第二步驟：安裝php-debug</li>
+</ul>
+<p>!WAMP輕鬆學會架設網頁伺服器](<a href="http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png" target="_blank" rel="external">http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png</a>)</p>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h2 id="第一步驟：安裝配置xdebug"><a href="#第一步驟：安裝配置xdebug" class="headerlink" title="第一步驟：安裝配置xdebug"></a>第一步驟：安裝配置xdebug</h2><hr>
+<p>1.先到XDEBUG的官方網站來下載！看你php搭配環境是IIS還是Apache去挑選是TS或非TS。</p>
+<p><img src="https://imgur.com/mRMjvXJ.png" alt=""></p>
+<p>2.下載完畢後，將dll檔扔進php目錄裡的ext目錄裡。</p>
+<p>3.在php.ini文檔裡頭寫下如下（附上官方說明：<a href="https://xdebug.org/docs/install）" target="_blank" rel="external">https://xdebug.org/docs/install）</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zend_extension=&quot;路徑/xdebug檔名&quot;</div></pre></td></tr></table></figure>
+<p>4.大功告成啦！重啟後看看php的info裡面有沒有xdebug的模塊就行啦！</p>
+<p><br></p>
+<hr>
+<h2 id="第二步驟：安裝php-debug"><a href="#第二步驟：安裝php-debug" class="headerlink" title="第二步驟：安裝php-debug"></a>第二步驟：安裝php-debug</h2><hr>
+<p>1.打開Atom，安裝php-debug的插件。</p>
+<p>2.安裝完畢後，配置參數，請在php.ini裡添加如下配置（說明文檔：<a href="https://atom.io/packages/php-debug）" target="_blank" rel="external">https://atom.io/packages/php-debug）</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xdebug]  </div><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_host=127.0.0.1</div><div class="line">xdebug.remote_connect_back=1    # Not safe for production servers</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=dbgp</div><div class="line">xdebug.remote_mode=req</div><div class="line">xdebug.remote_autostart=true</div></pre></td></tr></table></figure>
+<p>2.設置好後，重啟Apache，並打開Atom，基本上就能使用Debug的功能了！</p>
+<p><img src="https://imgur.com/g5nfljP.png" alt=""></p>
+<p>如果無法使用，請查看port是否被其他東西佔用（比如你多開了瀏覽器，而且都跑到127.0.0.1等各式奇怪狀況），最佳方法便是重開機，再用netstat查看，基本上就能成功啦！</p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2017/09/04/WAMP架設指南/" rel="next" title="WAMP架設指南">
+    下一篇：WAMP架設指南core
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function() {
+                this.page.url = 'http://yoursite.com/2017/09/05/ATOM與php_debug與Xdbug/';
+                this.page.identifier = '2017/09/05/ATOM與php_debug與Xdbug/';
+            };
+            (function() {
+                var d = document,
+                    s = d.createElement('script');
+                s.src = '//t4xue-xi-lu-cheng.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+        </noscript>
+    </section>
+
 
 
 </div>
