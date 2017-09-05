@@ -14,7 +14,6 @@
 <ul>
 <li>第二步驟：安裝php-debug</li>
 </ul>
-<p>!WAMP輕鬆學會架設網頁伺服器](<a href="http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png" target="_blank" rel="external">http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png</a>)</p>
 <a id="more"></a>
 <p><br></p>
 <hr>
@@ -436,18 +435,18 @@
     </entry>
     
     <entry>
+      <title><![CDATA[读书]]></title>
+      <url>/reading/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于]]></title>
       <url>/about/index.html</url>
       <content type="html"><![CDATA[<p>資管系畢業不久的學生，或許不成熟的地方很多，但因為有這些不成熟，才能讓自己更加成熟！</p>
 <p>這個Blog，就是把自己學習到的知識做好整理後，分享出來的地方！</p>
 <p>時時進步，學而不退！希望能得到自己想要的生活！</p>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[读书]]></title>
-      <url>/reading/index.html</url>
-      <content type="html"></content>
     </entry>
     
   

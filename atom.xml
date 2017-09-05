@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-05T14:52:14.576Z</updated>
+  <updated>2017-09-05T15:07:03.576Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/09/05/ATOM%E8%88%87php_debug%E8%88%87Xdbug/"/>
     <id>http://yoursite.com/2017/09/05/ATOM與php_debug與Xdbug/</id>
     <published>2017-09-05T14:10:13.000Z</published>
-    <updated>2017-09-05T14:52:14.576Z</updated>
+    <updated>2017-09-05T15:07:03.576Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ATOM好用的插件Php-Debug【Windows】"><a href="#ATOM好用的插件Php-Debug【Windows】" class="headerlink" title="ATOM好用的插件Php-Debug【Windows】"></a>ATOM好用的插件Php-Debug【Windows】</h1><p>今天給大家介紹一個Atom上好用的插件！</p>
 <p>可以有效幫助開發者在PHP開發環境下，輕鬆Debug啦！從此告別註解！</p>
@@ -31,7 +31,6 @@
 <ul>
 <li>第二步驟：安裝php-debug</li>
 </ul>
-<p>!WAMP輕鬆學會架設網頁伺服器](<a href="http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png" target="_blank" rel="external">http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png</a>)</p>
 <a id="more"></a>
 <p><br></p>
 <hr>
@@ -64,7 +63,6 @@
 &lt;ul&gt;
 &lt;li&gt;第二步驟：安裝php-debug&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;!WAMP輕鬆學會架設網頁伺服器](&lt;a href=&quot;http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.centumsol.com/wp-content/uploads/2012/12/LAMPP_Architecture.png&lt;/a&gt;)&lt;/p&gt;
     
     </summary>
     
