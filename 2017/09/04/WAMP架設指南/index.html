@@ -195,16 +195,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/網路/">
-                    網路 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/電腦硬體/">
+                    電腦硬體 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/電腦硬體/">
-                    電腦硬體 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/網路/">
+                    網路 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -363,9 +363,15 @@
 <p><br></p>
 <hr>
 <h2 id="疑難雜症"><a href="#疑難雜症" class="headerlink" title="疑難雜症"></a>疑難雜症</h2><hr>
-<p>Q1：</p>
+<p>Q1：遇到無法啟動此程序，因為電腦丟師VCRUNTIME140.dll怎麼辦？</p>
 <p><img src="https://pic4.zhimg.com/v2-bf593ff3824b36072cdcbc6a7544bb1f_b.png" alt="img"></p>
 <p>回答：需要安裝c++2015及其他相關套件，安裝即可解決問題。</p>
+<p>Q2：遇到嘗試存取通訊端被拒絕，因為存取權限不足怎麼辦？</p>
+<p><img src="https://imgur.com/a3ixzdh.jpg" alt=""></p>
+<p>回答：解決方法有兩個，一個是改你httpd.conf的Listen端口。</p>
+<p>​    二則是找到那個被佔用的端口程序，然後把它關掉。</p>
+<p>要尋找佔用的程序請用netstat下去尋找，比如：netstat -nao |find “0.0.0.0:8080”</p>
+<p>就能找到程序，並找到PID在管理員那邊關掉它（當然你也能打指令把它關掉）</p>
 
                 
 
