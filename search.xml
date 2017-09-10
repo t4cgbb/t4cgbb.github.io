@@ -20,6 +20,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$cfg[&apos;blowfish_secret&apos;] = &apos;fhdrqdwdqdwdqw&apos;; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */</div></pre></td></tr></table></figure>
 <p>4.看一下php.ini的extension=php_mbstring.dll（編碼模組）是否被註解，若被註解請移除並使用。</p>
 <p>5.登入localhost/phpmyadmin即可成功！</p>
+<p>6.將其餘db及tables的相關配置解開。</p>
+<p><img src="https://i.imgur.com/SzhYftI.jpg" alt=""></p>
+<p><br></p>
 ]]></content>
       
         <categories>
