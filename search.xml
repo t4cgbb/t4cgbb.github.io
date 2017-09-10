@@ -3,6 +3,41 @@
   
     
     <entry>
+      <title><![CDATA[phpmyadmin配置【Windows】]]></title>
+      <url>/2017/09/10/phpmyadmin%E9%85%8D%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<h1 id="phpmyadmin配置【Windows】"><a href="#phpmyadmin配置【Windows】" class="headerlink" title="phpmyadmin配置【Windows】"></a>phpmyadmin配置【Windows】</h1><p><img src="https://imgur.com/8nvS1Bw.png" alt=""></p>
+<ul>
+<li>快速安裝phpmyadmin！</li>
+</ul>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h2 id="快速安裝phpmyadmin！"><a href="#快速安裝phpmyadmin！" class="headerlink" title="快速安裝phpmyadmin！"></a>快速安裝phpmyadmin！</h2><hr>
+<p>1.來到<a href="https://www.phpmyadmin.net/" target="_blank" rel="external">phpadmin</a>的官方網站。</p>
+<p><img src="https://i.imgur.com/kEAxd9Q.jpg" alt=""></p>
+<p>2.下載完畢後，解壓到你的web目錄下（apache預設為htdocs）</p>
+<p>3.將根目錄下的config.simple.inc.php改名為config.inc.php，開啟後配置短語密碼（blowfish_secret）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$cfg[&apos;blowfish_secret&apos;] = &apos;fhdrqdwdqdwdqw&apos;; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */</div></pre></td></tr></table></figure>
+<p>4.看一下php.ini的extension=php_mbstring.dll（編碼模組）是否被註解，若被註解請移除並使用。</p>
+<p>5.登入localhost/phpmyadmin即可成功！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> PHP </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[ATOM好用的插件Php-Debug【Windows】]]></title>
       <url>/2017/09/05/ATOM%E8%88%87php_debug%E8%88%87Xdbug/</url>
       <content type="html"><![CDATA[<h1 id="ATOM好用的插件Php-Debug【Windows】"><a href="#ATOM好用的插件Php-Debug【Windows】" class="headerlink" title="ATOM好用的插件Php-Debug【Windows】"></a>ATOM好用的插件Php-Debug【Windows】</h1><p>今天給大家介紹一個Atom上好用的插件！</p>
@@ -13,6 +48,7 @@
 </ul>
 <ul>
 <li>第二步驟：安裝php-debug</li>
+<li>解析：運作原理</li>
 </ul>
 <a id="more"></a>
 <p><br></p>
@@ -29,10 +65,19 @@
 <h2 id="第二步驟：安裝php-debug"><a href="#第二步驟：安裝php-debug" class="headerlink" title="第二步驟：安裝php-debug"></a>第二步驟：安裝php-debug</h2><hr>
 <p>1.打開Atom，安裝php-debug的插件。</p>
 <p>2.安裝完畢後，配置參數，請在php.ini裡添加如下配置（說明文檔：<a href="https://atom.io/packages/php-debug）" target="_blank" rel="external">https://atom.io/packages/php-debug）</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xdebug]  </div><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_host=127.0.0.1</div><div class="line">xdebug.remote_connect_back=1    # Not safe for production servers</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=dbgp</div><div class="line">xdebug.remote_mode=req</div><div class="line">xdebug.remote_autostart=true</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xdebug]  </div><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_host=127.0.0.1</div><div class="line">xdebug.remote_connect_back=1</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=dbgp</div><div class="line">xdebug.remote_mode=req</div><div class="line">xdebug.remote_autostart=true</div></pre></td></tr></table></figure>
 <p>2.設置好後，重啟Apache，並打開Atom，基本上就能使用Debug的功能了！</p>
 <p><img src="https://imgur.com/g5nfljP.png" alt=""></p>
-<p>如果無法使用，請查看port是否被其他東西佔用（比如你多開了瀏覽器，而且都跑到127.0.0.1等各式奇怪狀況），最佳方法便是重開機，再用netstat查看，基本上就能成功啦！</p>
+<p><br></p>
+<hr>
+<h2 id="解析：運作原理"><a href="#解析：運作原理" class="headerlink" title="解析：運作原理"></a>解析：運作原理</h2><hr>
+<p><img src="https://xdebug.org/images/docs/dbgp-setup.gif" alt="img"></p>
+<p>1.伺服器為10.0.1.2、端口80（預設），IDE（ATOM）在10.0.1.42的環境，所以xdebug.remote_host設定為10.0.1.2。</p>
+<p>2.IDE（ATOM）傾聽9000的port，所以xdebug.remote_port設定為9000。</p>
+<p>3.開啟IDE（ATOM）後會自動監聽10.0.1.2 9000的端口，透過php的xdeubg在開啟網頁後，即會利用DBGP協議建立起連接，並且將結果送回給IDE（ATOM）。</p>
+<p>如果發生以下問題：</p>
+<p>1.為什麼ATOM一直listening的字樣？</p>
+<p>A：檢查php的設定是否配置正確、80端口跟9000端口是否正確開啟或被佔用等、檢查atom中php_debug的設定，並配置path即可。</p>
 ]]></content>
       
         <categories>
@@ -75,17 +120,17 @@
 <p>(五)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ScriptAlias /cgi-bin/ &quot;c:/Apache24/cgi-bin/&quot;		\\在使用cgi-bin時，指向後面真實路徑</div><div class="line"></div><div class="line">&lt;Directory &quot;c:/Apache24/cgi-bin&quot;&gt;					\\設定權限</div><div class="line">    AllowOverride None</div><div class="line">    Options None</div><div class="line">    Require all granted</div><div class="line">&lt;/Directory&gt;</div></pre></td></tr></table></figure>
 <p>6.配置完畢後，輸入httpd -t，可驗證conf是否有錯誤。</p>
-<p>httpd.exe -k install -n apache（安裝服務，叫做apache）</p>
-<p>httpd.exe -k uninstall（）</p>
+<p>httpd -k install -n apache（安裝服務，叫做apache）</p>
+<p>httpd -k uninstall（）</p>
 <p><img src="https://imgur.com/A165V5j.png" alt=""></p>
-<p>7.安裝服務：httpd.exe -k install    ，下圖即配置成功，如果要自己改名記得加個-n就行了            （卸載服務為httpd.exe -k uninstall）</p>
+<p>7.安裝服務：httpd -k install，下圖即配置成功，如果要自己改名記得加個-n就行了            （卸載服務為httpd -k uninstall）</p>
 <p><img src="https://imgur.com/VnMHb9i.png" alt=""></p>
 <p>如果出現如下端口佔用的情況</p>
 <p><img src="https://pic3.zhimg.com/v2-d14df0ddec58f6e62bcfbaf68c27a4f6_r.png" alt=""></p>
 <p>有兩種解決方法：</p>
 <p>1.在httpd.conf裡找到Listen 80改為其他端口。</p>
 <p>2.在dos輸入命令netstat -ano  查看佔用端口，然後使用taskkill -f -t -im  程序名  結束掉它。</p>
-<p>8.啟動服務：httpd.exe -k start （停止服務是stop 重啟是restart）</p>
+<p>8.啟動服務：httpd -k start （停止服務是stop 重啟是restart）</p>
 <p>（這邊補充一下服務的六大口訣：安裝、啟動、開機啟動、防火牆、測試、上傳資料，基本上若服務有問題從中就能解決了。）</p>
 <p>9.Apache環境設定成功啦！</p>
 <p><img src="https://imgur.com/arsHb5q.png" alt=""></p>
@@ -96,7 +141,7 @@
 <p><img src="https://imgur.com/plCjnU4.png" alt=""></p>
 <p>2.一般來說Apache環境下的PHP會選擇Thread Safe（簡稱：TS版）來架設。</p>
 <p>3.解壓後，開啟apache的httpd.conf在最下面配置這四條：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">AddHandler application/x-httpd-php .php	</div><div class="line">AddType application/x-httpd-php .php .html .htm						//檔案名、若無則.php不會run</div><div class="line">LoadModule php7_module &quot;D:\softeware\code\web server\php\php7apache2_4.dll&quot;	載入php7模塊</div><div class="line">PHPIniDir &quot;D:\softeware\code\web server\php&quot;	若有配置php.ini則載入</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">AddHandler application/x-httpd-php .php	</div><div class="line">AddType application/x-httpd-php .php .html .htm						//檔案名、若無則.php不會run</div><div class="line">DirectoryIndex index.html index.htm index.php index.html 			//目錄有這些檔名直接執行</div><div class="line">LoadModule php7_module &quot;D:\softeware\code\web server\php\php7apache2_4.dll&quot;	//載入php7模塊</div><div class="line">PHPIniDir &quot;D:\softeware\code\web server\php&quot;	//若有配置php.ini則載入</div></pre></td></tr></table></figure>
 <p>4.寫一段php的code</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">phpinfo();</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
 <p>5.php配置成功！</p>
@@ -435,18 +480,18 @@
     </entry>
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>/about/index.html</url>
       <content type="html"><![CDATA[<p>資管系畢業不久的學生，或許不成熟的地方很多，但因為有這些不成熟，才能讓自己更加成熟！</p>
 <p>這個Blog，就是把自己學習到的知識做好整理後，分享出來的地方！</p>
 <p>時時進步，學而不退！希望能得到自己想要的生活！</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   

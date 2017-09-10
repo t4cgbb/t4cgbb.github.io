@@ -179,6 +179,14 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/PHP/">
+                    PHP <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/網站相關/">
                     網站相關 <span class="right">2 篇</span></a>
                 </a>
@@ -205,14 +213,6 @@
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/電腦硬體/">
                     電腦硬體 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/PHP/">
-                    PHP <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -286,7 +286,7 @@
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#ATOM好用的插件Php-Debug【Windows】"><span class="section table-of-contents-text">ATOM好用的插件Php-Debug【Windows】</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第一步驟：安裝配置xdebug"><span class="section table-of-contents-text">第一步驟：安裝配置xdebug</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第二步驟：安裝php-debug"><span class="section table-of-contents-text">第二步驟：安裝php-debug</span></a></li></ol></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#ATOM好用的插件Php-Debug【Windows】"><span class="section table-of-contents-text">ATOM好用的插件Php-Debug【Windows】</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第一步驟：安裝配置xdebug"><span class="section table-of-contents-text">第一步驟：安裝配置xdebug</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第二步驟：安裝php-debug"><span class="section table-of-contents-text">第二步驟：安裝php-debug</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#解析：運作原理"><span class="section table-of-contents-text">解析：運作原理</span></a></li></ol></li></ol>
 </div>
 
 
@@ -299,6 +299,7 @@
 </ul>
 <ul>
 <li>第二步驟：安裝php-debug</li>
+<li>解析：運作原理</li>
 </ul>
 <a id="more"></a>
 <p><br></p>
@@ -315,12 +316,27 @@
 <h2 id="第二步驟：安裝php-debug"><a href="#第二步驟：安裝php-debug" class="headerlink" title="第二步驟：安裝php-debug"></a>第二步驟：安裝php-debug</h2><hr>
 <p>1.打開Atom，安裝php-debug的插件。</p>
 <p>2.安裝完畢後，配置參數，請在php.ini裡添加如下配置（說明文檔：<a href="https://atom.io/packages/php-debug）" target="_blank" rel="external">https://atom.io/packages/php-debug）</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xdebug]  </div><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_host=127.0.0.1</div><div class="line">xdebug.remote_connect_back=1    # Not safe for production servers</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=dbgp</div><div class="line">xdebug.remote_mode=req</div><div class="line">xdebug.remote_autostart=true</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[xdebug]  </div><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_host=127.0.0.1</div><div class="line">xdebug.remote_connect_back=1</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=dbgp</div><div class="line">xdebug.remote_mode=req</div><div class="line">xdebug.remote_autostart=true</div></pre></td></tr></table></figure>
 <p>2.設置好後，重啟Apache，並打開Atom，基本上就能使用Debug的功能了！</p>
 <p><img src="https://imgur.com/g5nfljP.png" alt=""></p>
-<p>如果無法使用，請查看port是否被其他東西佔用（比如你多開了瀏覽器，而且都跑到127.0.0.1等各式奇怪狀況），最佳方法便是重開機，再用netstat查看，基本上就能成功啦！</p>
+<p><br></p>
+<hr>
+<h2 id="解析：運作原理"><a href="#解析：運作原理" class="headerlink" title="解析：運作原理"></a>解析：運作原理</h2><hr>
+<p><img src="https://xdebug.org/images/docs/dbgp-setup.gif" alt="img"></p>
+<p>1.伺服器為10.0.1.2、端口80（預設），IDE（ATOM）在10.0.1.42的環境，所以xdebug.remote_host設定為10.0.1.2。</p>
+<p>2.IDE（ATOM）傾聽9000的port，所以xdebug.remote_port設定為9000。</p>
+<p>3.開啟IDE（ATOM）後會自動監聽10.0.1.2 9000的端口，透過php的xdeubg在開啟網頁後，即會利用DBGP協議建立起連接，並且將結果送回給IDE（ATOM）。</p>
+<p>如果發生以下問題：</p>
+<p>1.為什麼ATOM一直listening的字樣？</p>
+<p>A：檢查php的設定是否配置正確、80端口跟9000端口是否正確開啟或被佔用等、檢查atom中php_debug的設定，並配置path即可。</p>
 
                 
+<p class="pink-link-context">
+    <a href="/2017/09/10/phpmyadmin配置/" rel="next" title="phpmyadmin配置【Windows】">
+    上一篇：phpmyadmin配置【Windows】
+  </a>
+</p>
+
 
 
 <p class="pink-link-context">
