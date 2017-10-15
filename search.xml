@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[上傳檔案縮圖、裁圖]]></title>
+      <url>/2017/10/16/%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88%E7%B8%AE%E5%9C%96%E3%80%81%E8%A3%81%E5%9C%96/</url>
+      <content type="html"><![CDATA[<h1 id="上傳檔案縮圖、裁圖"><a href="#上傳檔案縮圖、裁圖" class="headerlink" title="上傳檔案縮圖、裁圖"></a>上傳檔案縮圖、裁圖</h1><ul>
+<li>用class.upload.php來上傳圖片並將圖片縮圖、裁圖！</li>
+</ul>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h2 id="源碼"><a href="#源碼" class="headerlink" title="源碼"></a>源碼</h2><hr>
+<p>HTML：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;h1&gt;上傳功能&lt;/h1&gt;</div><div class="line">  &lt;form action=&quot;upload.php&quot; method=&quot;post&quot; class=&quot;form-horizontal&quot; role=&quot;form&quot; enctype=&quot;multipart/form-data&quot;&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;label&gt;上傳&lt;/label&gt;</div><div class="line">      &lt;input type=&quot;file&quot; name=&quot;file_pic&quot; id=&quot;file_pic&quot;&gt;</div><div class="line">      &lt;input type=&quot;submit&quot; value=&quot;上傳&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>PHP生成驗證碼：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">  include_once(&quot;class/class.upload.php&quot;);</div><div class="line">  $pic = new Upload($_FILES[&apos;file_pic&apos;],&apos;zh-tw&apos;);</div><div class="line"></div><div class="line">if($pic -&gt; uploaded)&#123;</div><div class="line">  //大圖</div><div class="line">  $pic -&gt; file_new_name_body = &apos;1&apos;;</div><div class="line">  $pic -&gt; file_overwrite = true;</div><div class="line">  $pic -&gt; image_resize = true;</div><div class="line">  $pic -&gt; image_x = 600;</div><div class="line">  $pic -&gt; image_y = 400;</div><div class="line">  $pic -&gt; image_convert = &apos;png&apos;;</div><div class="line">  $pic -&gt; image_ratio_crop = true;</div><div class="line">  $pic -&gt; Process(&apos;upload&apos;);</div><div class="line">  if(!$pic -&gt; processed)&#123;</div><div class="line">    return &apos;error: &apos;. $pic -&gt; error;</div><div class="line">  &#125;</div><div class="line">  $pic -&gt; Clean();</div><div class="line">&#125;else &#123;</div><div class="line">  return &apos;error:&apos; . $pic -&gt; error;</div><div class="line">&#125;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> PHP </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 上傳 </tag>
+            
+            <tag> PHP </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[用PHP產生驗證碼]]></title>
       <url>/2017/09/17/%E7%94%A8PHP%E7%94%A2%E7%94%9F%E9%A9%97%E8%AD%89%E7%A2%BC/</url>
       <content type="html"><![CDATA[<h1 id="用PHP產生驗證碼"><a href="#用PHP產生驗證碼" class="headerlink" title="用PHP產生驗證碼"></a>用PHP產生驗證碼</h1><p><img src="https://i.imgur.com/HnKXYgc.png" alt=""></p>
@@ -32,9 +65,9 @@
         
         <tags>
             
-            <tag> 驗證碼 </tag>
-            
             <tag> PHP </tag>
+            
+            <tag> 驗證碼 </tag>
             
         </tags>
         
@@ -515,18 +548,18 @@
   
     
     <entry>
-      <title><![CDATA[分享]]></title>
-      <url>/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[關於]]></title>
       <url>/about/index.html</url>
       <content type="html"><![CDATA[<p>資管系畢業不久的學生，或許不成熟的地方很多，但因為有這些不成熟，才能讓自己更加成熟！</p>
 <p>這個Blog，就是把自己學習到的知識做好整理後，分享出來的地方！</p>
 <p>時時進步，學而不退！希望能得到自己想要的生活！</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[分享]]></title>
+      <url>/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   

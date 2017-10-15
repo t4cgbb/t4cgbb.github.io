@@ -7,7 +7,7 @@
 
     
 
-    <title>網路 | t4學習路程！</title>
+    <title>上傳檔案縮圖、裁圖 | t4學習路程！</title>
     <meta name="author" content="t4cgbb">
     
     <meta name="description" content="HTML、CSS、PHP、MYSQL等學習資料記錄。">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="上傳檔案縮圖、裁圖"/>
     <meta property="og:site_name" content="各式學習記錄Blog！"/>
 
     
@@ -241,30 +241,109 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper red">
         <span class="breadcrumb">當前位置（分類目錄）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/PHP/">PHP</a>
+
 
         
-            <a class="breadcrumb" href="/categories/網路/">網路</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>上傳檔案縮圖、裁圖</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2017-10-15T17:07:03.000Z"><a href="/2017/10/16/上傳檔案縮圖、裁圖/">2017-10-16</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2017/08/15/淺談DNS到底是什麼！/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-08-15T05:19:41.000Z">2017-08-15</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                淺談DNS到底是什麼！
-            </a>
+            <a href="/tags/上傳/" class="chip pink lighten-1">上傳</a>
+        
+            <a href="/tags/PHP/" class="chip pink lighten-1">PHP</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#上傳檔案縮圖、裁圖"><span class="section table-of-contents-text">上傳檔案縮圖、裁圖</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#源碼"><span class="section table-of-contents-text">源碼</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="上傳檔案縮圖、裁圖"><a href="#上傳檔案縮圖、裁圖" class="headerlink" title="上傳檔案縮圖、裁圖"></a>上傳檔案縮圖、裁圖</h1><ul>
+<li>用class.upload.php來上傳圖片並將圖片縮圖、裁圖！</li>
+</ul>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<h2 id="源碼"><a href="#源碼" class="headerlink" title="源碼"></a>源碼</h2><hr>
+<p>HTML：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;h1&gt;上傳功能&lt;/h1&gt;</div><div class="line">  &lt;form action=&quot;upload.php&quot; method=&quot;post&quot; class=&quot;form-horizontal&quot; role=&quot;form&quot; enctype=&quot;multipart/form-data&quot;&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;label&gt;上傳&lt;/label&gt;</div><div class="line">      &lt;input type=&quot;file&quot; name=&quot;file_pic&quot; id=&quot;file_pic&quot;&gt;</div><div class="line">      &lt;input type=&quot;submit&quot; value=&quot;上傳&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>PHP生成驗證碼：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">  include_once(&quot;class/class.upload.php&quot;);</div><div class="line">  $pic = new Upload($_FILES[&apos;file_pic&apos;],&apos;zh-tw&apos;);</div><div class="line"></div><div class="line">if($pic -&gt; uploaded)&#123;</div><div class="line">  //大圖</div><div class="line">  $pic -&gt; file_new_name_body = &apos;1&apos;;</div><div class="line">  $pic -&gt; file_overwrite = true;</div><div class="line">  $pic -&gt; image_resize = true;</div><div class="line">  $pic -&gt; image_x = 600;</div><div class="line">  $pic -&gt; image_y = 400;</div><div class="line">  $pic -&gt; image_convert = &apos;png&apos;;</div><div class="line">  $pic -&gt; image_ratio_crop = true;</div><div class="line">  $pic -&gt; Process(&apos;upload&apos;);</div><div class="line">  if(!$pic -&gt; processed)&#123;</div><div class="line">    return &apos;error: &apos;. $pic -&gt; error;</div><div class="line">  &#125;</div><div class="line">  $pic -&gt; Clean();</div><div class="line">&#125;else &#123;</div><div class="line">  return &apos;error:&apos; . $pic -&gt; error;</div><div class="line">&#125;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2017/09/17/用PHP產生驗證碼/" rel="next" title="用PHP產生驗證碼">
+    下一篇：用PHP產生驗證碼core
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function() {
+                this.page.url = 'http://yoursite.com/2017/10/16/上傳檔案縮圖、裁圖/';
+                this.page.identifier = '2017/10/16/上傳檔案縮圖、裁圖/';
+            };
+            (function() {
+                var d = document,
+                    s = d.createElement('script');
+                s.src = '//t4xue-xi-lu-cheng.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+        </noscript>
+    </section>
+
 
 
 </div>
