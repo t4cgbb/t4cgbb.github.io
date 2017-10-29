@@ -6,8 +6,6 @@
       <title><![CDATA[PHP基本輸出excel及Pdf]]></title>
       <url>/2017/10/30/PHP%E5%9F%BA%E6%9C%AC%E8%BC%B8%E5%87%BAexcel%E5%8F%8APdf/</url>
       <content type="html"><![CDATA[<h1 id="PHP基本輸出excel及Pdf"><a href="#PHP基本輸出excel及Pdf" class="headerlink" title="PHP基本輸出excel及Pdf"></a>PHP基本輸出excel及Pdf</h1><p>簡單利用phpexcel跟tppdf在php中進行檔案的匯出！</p>
-<p>可以有效幫助開發者在PHP開發環境下，輕鬆Debug啦！從此告別註解！</p>
-<p>以下兩步驟，立刻設定好debug的環境哦！</p>
 <ul>
 <li>利用phpexcel匯出excel檔案！</li>
 </ul>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-29T16:38:07.444Z</updated>
+  <updated>2017-10-29T16:44:48.830Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,11 +20,9 @@
     <link href="http://yoursite.com/2017/10/30/PHP%E5%9F%BA%E6%9C%AC%E8%BC%B8%E5%87%BAexcel%E5%8F%8APdf/"/>
     <id>http://yoursite.com/2017/10/30/PHP基本輸出excel及Pdf/</id>
     <published>2017-10-29T16:31:13.000Z</published>
-    <updated>2017-10-29T16:38:07.444Z</updated>
+    <updated>2017-10-29T16:44:48.830Z</updated>
     
     <content type="html"><![CDATA[<h1 id="PHP基本輸出excel及Pdf"><a href="#PHP基本輸出excel及Pdf" class="headerlink" title="PHP基本輸出excel及Pdf"></a>PHP基本輸出excel及Pdf</h1><p>簡單利用phpexcel跟tppdf在php中進行檔案的匯出！</p>
-<p>可以有效幫助開發者在PHP開發環境下，輕鬆Debug啦！從此告別註解！</p>
-<p>以下兩步驟，立刻設定好debug的環境哦！</p>
 <ul>
 <li>利用phpexcel匯出excel檔案！</li>
 </ul>
@@ -53,8 +51,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;PHP基本輸出excel及Pdf&quot;&gt;&lt;a href=&quot;#PHP基本輸出excel及Pdf&quot; class=&quot;headerlink&quot; title=&quot;PHP基本輸出excel及Pdf&quot;&gt;&lt;/a&gt;PHP基本輸出excel及Pdf&lt;/h1&gt;&lt;p&gt;簡單利用phpexcel跟tppdf在php中進行檔案的匯出！&lt;/p&gt;
-&lt;p&gt;可以有效幫助開發者在PHP開發環境下，輕鬆Debug啦！從此告別註解！&lt;/p&gt;
-&lt;p&gt;以下兩步驟，立刻設定好debug的環境哦！&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;利用phpexcel匯出excel檔案！&lt;/li&gt;
 &lt;/ul&gt;
