@@ -3,6 +3,41 @@
   
     
     <entry>
+      <title><![CDATA[jquery mobile動態添加元素之後不能正確渲染解決方法說明]]></title>
+      <url>/2017/11/27/jquery%20mobile%E5%8B%95%E6%85%8B%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E4%B9%8B%E5%BE%8C%E4%B8%8D%E8%83%BD%E6%AD%A3%E7%A2%BA%E6%B8%B2%E6%9F%93%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95%E8%AA%AA%E6%98%8E/</url>
+      <content type="html"><![CDATA[<p>listview： 添加 jq(“.detail”).listview(“refresh”);</p>
+<p>div或其他：添加.trigger( “create” );</p>
+<a id="more"></a>
+<p><br></p>
+<hr>
+<p>jqm在初始化頁面時會根據data-xxx在各元素中插入jqm的屬性和類等。在頁面初始化結束後，如果動態的插入一個元素，往往顯示很醜陋，因為沒有插入jqm的樣式。這個可以用瀏覽器裡的開發工具來查看，會發現有些元素多了很多類，而動態插入的元素代碼還是你寫的那樣子。</p>
+<p>如果要使動態插入的元素具有jqm的樣式，可以對jqm對象觸發create事件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&quot;font-size:18px;&quot;&gt; $(selector).trigger(&apos;create&apos;);&lt;/span&gt;</div></pre></td></tr></table></figure>
+<p>create事件適用範圍廣，甚至可以是不存在的元素(raw markup?)，比如要插入一個按鈕</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;&lt;a data-role=&quot;button&quot;&gt;dy button&lt;/a&gt;&apos;).appendTo(&apos;#content&apos;).trigger(&apos;create&apos;);</div></pre></td></tr></table></figure>
+<p>有些對象提供了refresh 方法，如listview、flip toggle。與create的區別是refresh方法需要作用在已存在的對像上，如</p>
+<p>$(‘ul’).listview(‘refresh’)，而且refresh只會去更新新加入的元素，如listview裡最新append的元素會更新，原有的保持不變。</p>
+<p><strong>不使用jqm樣式：</strong></p>
+<p>如果不希望jqm自動初始化你的元素，有兩種方法。加入data-role=”none”屬性，或者在mobileinit事件中對keepNative選項進行配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).bind(&apos;mobileinit&apos;,function()&#123; </div><div class="line"> $.mobile.page.prototype.options.keepNative = &quot;select, input.foo, textarea.bar&quot;; </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> jquery </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> debug </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PHP基本輸出excel及Pdf]]></title>
       <url>/2017/10/30/PHP%E5%9F%BA%E6%9C%AC%E8%BC%B8%E5%87%BAexcel%E5%8F%8APdf/</url>
       <content type="html"><![CDATA[<h1 id="PHP基本輸出excel及Pdf"><a href="#PHP基本輸出excel及Pdf" class="headerlink" title="PHP基本輸出excel及Pdf"></a>PHP基本輸出excel及Pdf</h1><p>簡單利用phpexcel跟tppdf在php中進行檔案的匯出！</p>

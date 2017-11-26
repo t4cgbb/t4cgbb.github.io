@@ -7,7 +7,7 @@
 
     
 
-    <title>用hexo在github建立個人網站 | t4學習路程！</title>
+    <title>jquery mobile動態添加元素之後不能正確渲染解決方法說明 | t4學習路程！</title>
     <meta name="author" content="t4cgbb">
     
     <meta name="description" content="HTML、CSS、PHP、MYSQL等學習資料記錄。">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="用hexo在github建立個人網站"/>
+    <meta property="og:title" content="jquery mobile動態添加元素之後不能正確渲染解決方法說明"/>
     <meta property="og:site_name" content="各式學習記錄Blog！"/>
 
     
@@ -256,7 +256,7 @@
             
     
     
-    <a class="breadcrumb" href="/categories/網站相關/">網站相關</a><a class="breadcrumb" href="/categories/網站相關/hexo/">hexo</a>
+    <a class="breadcrumb" href="/categories/jquery/">jquery</a>
 
 
         
@@ -273,12 +273,12 @@
             <div class="article-title">
                 
     
-        <h1>用hexo在github建立個人網站</h1>
+        <h1>jquery mobile動態添加元素之後不能正確渲染解決方法說明</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2017-08-13T16:00:00.000Z"><a href="/2017/08/14/用hexo在github建立個人網站/">2017-08-14</a></time>
+            <time class="pink-link-context" datetime="2017-11-26T22:10:13.000Z"><a href="/2017/11/27/jquery mobile動態添加元素之後不能正確渲染解決方法說明/">2017-11-27</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -288,104 +288,41 @@
             
     <div class="tags-row">
         
-            <a href="/tags/hexo/" class="chip pink lighten-1">hexo</a>
-        
-            <a href="/tags/github/" class="chip pink lighten-1">github</a>
+            <a href="/tags/debug/" class="chip pink lighten-1">debug</a>
         
     </div>
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#架設Hexo在Github四步驟！"><span class="section table-of-contents-text">架設Hexo在Github四步驟！</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第一步驟：準備好你的github"><span class="section table-of-contents-text">第一步驟：準備好你的github</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第二步驟：hexo的安裝"><span class="section table-of-contents-text">第二步驟：hexo的安裝</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第三步驟：將hexo上傳github"><span class="section table-of-contents-text">第三步驟：將hexo上傳github</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第四步驟：申請域名綁定域名！（自行選配）"><span class="section table-of-contents-text">第四步驟：申請域名綁定域名！（自行選配）</span></a></li></ol></li></ol>
+    
 </div>
 
 
             <div class="entry pink-link-context">
-                <h1 id="架設Hexo在Github四步驟！"><a href="#架設Hexo在Github四步驟！" class="headerlink" title="架設Hexo在Github四步驟！"></a>架設Hexo在Github四步驟！</h1><ul>
-<li>第一步驟：準備好你的github及環境配置</li>
-</ul>
-<ul>
-<li>第二步驟：hexo的安裝</li>
-</ul>
-<ul>
-<li>第三步驟：將hexo上傳github</li>
-</ul>
-<ul>
-<li>第四步驟：申請域名綁定域名！（自行選配）</li>
-</ul>
+                <p>listview： 添加 jq(“.detail”).listview(“refresh”);</p>
+<p>div或其他：添加.trigger( “create” );</p>
 <a id="more"></a>
 <p><br></p>
 <hr>
-<h2 id="第一步驟：準備好你的github"><a href="#第一步驟：準備好你的github" class="headerlink" title="第一步驟：準備好你的github"></a>第一步驟：準備好你的github</h2><hr>
-<p><br><br>1.先到官網將帳號註冊完畢，點選右上角的+號選擇New repository。</p>
-<p>2.因為要做個人站點，按官方github說明文件，我們必須取「你的帳號名稱」.github.io**的格式。</p>
-<p>3.安裝<a href="https://git-scm.com/download/win" target="_blank" rel="external">git</a>（主要是為了上傳站點，還有每次如果修改好hexo檔案後，所必須具備的軟體），下載下來並安裝。</p>
-<p>4.安裝成功後，可在cmd畫面查看。<br><img src="https://i.gyazo.com/ac5ffa585824ffa7eb1f532ce6e13bf9.png" alt="git安裝成功"></p>
-<p>5.接下來使用git來配置github的帳戶與密碼：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;你的github用戶名&quot;</div><div class="line">git config --global user.email &quot;你的github註冊郵箱&quot;</div></pre></td></tr></table></figure></p>
-<p><br><br>6.生成ssh密鑰文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"你的github註冊郵箱"</span></div></pre></td></tr></table></figure></p>
-<p><img src="https://i.gyazo.com/e2dc9868b00de29c8d3ea14cd75ca765.png" alt="生成公鑰圖"></p>
-<p><br><br>7.打開<a href="http://link.zhihu.com/?target=https%3A//github.com/settings/keys" target="_blank" rel="external">GitHub_Settings_keys</a>頁面 ，新建new SSH Key，將id_rsa.pub的內容黏貼到key裡頭。<br><img src="https://i.gyazo.com/b3c978b27ac5427918f34e39a67b16e0.png" alt="KEY"></p>
-<p>8.設定成功後，會出下如下畫面，這樣以後跟github做連接，概念如圖二，在自己本地電腦生成一對公鑰跟私鑰，公鑰傳給github，當要連接過去的時候，github上面的公鑰會與你電腦上的私鑰匹配，若是正確則連接。<br><img src="https://i.gyazo.com/c209f37eb94b78dc38f54a12a6fcaa91.png" alt="ssh登入成功"></p>
-<p><img src="https://docstore.mik.ua/orelly/networking_2ndEd/ssh/figs/ssh_0202.gif" alt="ssh概念圖"></p>
-<p>9.安裝<a href="https://nodejs.org/en/download/" target="_blank" rel="external">node.js</a>,安裝完畢後，輸入node -v查看是否安裝成功，看見版本號後就大功告成！</p>
-<p><br></p>
-<hr>
-<h2 id="第二步驟：hexo的安裝"><a href="#第二步驟：hexo的安裝" class="headerlink" title="第二步驟：hexo的安裝"></a>第二步驟：hexo的安裝</h2><hr>
-<p><br></p>
-<p>1.先創建一個資料夾（你站點的位置想放哪就創哪），創建完畢後開啟cmd，移到那個資料夾，輸入以下指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<p>2.接著初始化站點（就是會把一些基本設置寫進你的自訂資料夾裡）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init [自定資料夾名字]</div></pre></td></tr></table></figure>
-<p>3.建立一篇新文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;  //格式</div><div class="line">hexo new test  //我們建立打這樣，使用預設的樣版。</div></pre></td></tr></table></figure>
-<p>4.產生靜態檔案（兩個指令都可，一個全寫、一個簡稱）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo g</div></pre></td></tr></table></figure>
-<p>5.在本機上啟動服務器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo server</div><div class="line">hexo s</div></pre></td></tr></table></figure>
-<p>6.輸入localhost:4000就可以看見站點了！</p>
-<p><img src="http://r12f-cdn.azureedge.net/r12f-assets/post_assets/2017-02-05-building-blog-with-hexo-and-github-pages/hexo-first-blog.png" alt="hexo index"></p>
-<p>hexo一些常用的指令可以到<a href="https://hexo.io/zh-tw/docs/commands.html" target="_blank" rel="external">官網</a>去看，像是hexo如果升級了指令怎麼打，如何清除快取檔，創建新文章等等……</p>
-<p><br></p>
-<hr>
-<h2 id="第三步驟：將hexo上傳github"><a href="#第三步驟：將hexo上傳github" class="headerlink" title="第三步驟：將hexo上傳github"></a>第三步驟：將hexo上傳github</h2><hr>
-<p><br><br>1.根資料夾下（不是theme裡面的，那個是主題配置）找到_config.yml的站點配置文件，以文本方式開啟即可。</p>
-<p>2.開啟後，搜尋deploy，修改如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: 填寫你的github的網址</div><div class="line">branch: master	//「你的帳號名稱」.github.io這種格式只能在master發佈</div><div class="line">message: 自定義你的提交訊息(預設是 Site updated: &#123;&#123; now(&apos;YYYY-MM-DD HH:mm:ss&apos;) &#125;&#125;)</div></pre></td></tr></table></figure>
-<p>3.再來安裝hexo-deployer-git（這是github才要裝的，像是hereku那些又是另外插件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>4.分別輸入以下三條指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean		//這是清除db.json（快取檔案）跟已經生成的靜態檔案（public)</div><div class="line">hexo g			//生成靜態檔案</div><div class="line">hexo d			//部署到你剛剛文檔設定的伺服器上</div></pre></td></tr></table></figure>
-<p>5.部署成功！</p>
-<p><img src="https://i.gyazo.com/2d1f2607e6662d343987806444603774.png" alt="hexo部署成功"></p>
-<p>6.請輸入<strong>「你的帳號名稱」.github.io</strong>，沒有意外的話就會出現你的站點首頁了！</p>
-<p><br></p>
-<hr>
-<h2 id="第四步驟：申請域名綁定域名！（自行選配）"><a href="#第四步驟：申請域名綁定域名！（自行選配）" class="headerlink" title="第四步驟：申請域名綁定域名！（自行選配）"></a>第四步驟：申請域名綁定域名！（自行選配）</h2><hr>
-<p> <br></p>
-<p>1.這邊介紹<a href="https://tw.godaddy.com/" target="_blank" rel="external">GoDaddy</a>，購買域名是必須花錢的，不過可以嘗試買一個一年的域名來試試看，大概就一杯珍奶還有找的價格。</p>
-<p><img src="http://www.webbuildersguide.com/wp-content/uploads/godaddy_review/1.jpg" alt=""></p>
-<p><br><br>2.註冊會員後，直接輸入自己想要的域名，就可以加入購物車購買了，不過結帳時請記得去找<a href="https://www.dute.me/" target="_blank" rel="external">優惠卷</a>，會省下不少錢的！</p>
-<p><img src="https://i.gyazo.com/51c170f1e868dcd4095247b1ffff8ad2.png" alt=""></p>
-<p><br><br>3.購買完域名後，就開始設定DNS（<a href="https://t4cgbb.space/2017/08/14/%E7%94%A8hexo%E5%9C%A8github%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" target="_blank" rel="external">關於DNS介紹詳細看這</a>），解析如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@          A             192.30.252.153</div><div class="line">@          A             192.30.252.154</div><div class="line">www      CNAME    username.github.io.</div></pre></td></tr></table></figure>
-<p>（若是有更改，可在官方github的<a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank" rel="external">page頁面說明</a>中查詢）</p>
-<p><br><br>4.然後這時要在去Github網站中，點選settings（齒輪圖案），之後進到頁面往下拉，設定自定義域名並儲存。</p>
-<p><img src="https://i.gyazo.com/6999521693ccb1eefa6b3d247dfd306e.png" alt="domain設定"></p>
-<p><br><br>5.在站點下資料夾裡的source目錄中，創建一個CNAME的文檔，裡頭填上自己申請的域名，並保存為<strong>所有文件</strong>，如下，<a href="http://wiki.jikexueyuan.com/project/github-pages-basics/cname-file.html" target="_blank" rel="external">可至此參考</a>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">t4cgbb.space</div></pre></td></tr></table></figure>
-<p><br><br>6.配置完成後，需重新上傳站點，一樣三個指令，未來會常常用到的！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean		</div><div class="line">hexo g			</div><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>5.如果出現憑證問題，可以去尋找免費的SSL憑證來代管網域，比如<a href="https://www.cloudflare.com/" target="_blank" rel="external">CLOUDFLARE</a>等。</p>
-<p>6.大功告成！<br><br></p>
+<p>jqm在初始化頁面時會根據data-xxx在各元素中插入jqm的屬性和類等。在頁面初始化結束後，如果動態的插入一個元素，往往顯示很醜陋，因為沒有插入jqm的樣式。這個可以用瀏覽器裡的開發工具來查看，會發現有些元素多了很多類，而動態插入的元素代碼還是你寫的那樣子。</p>
+<p>如果要使動態插入的元素具有jqm的樣式，可以對jqm對象觸發create事件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&quot;font-size:18px;&quot;&gt; $(selector).trigger(&apos;create&apos;);&lt;/span&gt;</div></pre></td></tr></table></figure>
+<p>create事件適用範圍廣，甚至可以是不存在的元素(raw markup?)，比如要插入一個按鈕</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&apos;&lt;a data-role=&quot;button&quot;&gt;dy button&lt;/a&gt;&apos;).appendTo(&apos;#content&apos;).trigger(&apos;create&apos;);</div></pre></td></tr></table></figure>
+<p>有些對象提供了refresh 方法，如listview、flip toggle。與create的區別是refresh方法需要作用在已存在的對像上，如</p>
+<p>$(‘ul’).listview(‘refresh’)，而且refresh只會去更新新加入的元素，如listview裡最新append的元素會更新，原有的保持不變。</p>
+<p><strong>不使用jqm樣式：</strong></p>
+<p>如果不希望jqm自動初始化你的元素，有兩種方法。加入data-role=”none”屬性，或者在mobileinit事件中對keepNative選項進行配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(document).bind(&apos;mobileinit&apos;,function()&#123; </div><div class="line"> $.mobile.page.prototype.options.keepNative = &quot;select, input.foo, textarea.bar&quot;; </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
                 
+
+
 <p class="pink-link-context">
-    <a href="/2017/08/15/淺談DNS到底是什麼！/" rel="next" title="淺談DNS到底是什麼！">
-    上一篇：淺談DNS到底是什麼！
+    <a href="/2017/10/30/PHP基本輸出excel及Pdf/" rel="next" title="PHP基本輸出excel及Pdf">
+    下一篇：PHP基本輸出excel及Pdfcore
   </a>
 </p>
-
-
 
 
             </div>
@@ -401,8 +338,8 @@
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function() {
-                this.page.url = 'http://yoursite.com/2017/08/14/用hexo在github建立個人網站/';
-                this.page.identifier = '2017/08/14/用hexo在github建立個人網站/';
+                this.page.url = 'http://yoursite.com/2017/11/27/jquery mobile動態添加元素之後不能正確渲染解決方法說明/';
+                this.page.identifier = '2017/11/27/jquery mobile動態添加元素之後不能正確渲染解決方法說明/';
             };
             (function() {
                 var d = document,
