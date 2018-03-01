@@ -629,16 +629,16 @@
   
     
     <entry>
-      <title><![CDATA[分享]]></title>
-      <url>/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[關於]]></title>
       <url>/about/index.html</url>
       <content type="html"><![CDATA[<p>記錄！</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[分享]]></title>
+      <url>/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
