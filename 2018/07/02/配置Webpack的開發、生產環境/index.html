@@ -187,14 +187,6 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/jquery/">
-                    jquery <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/網站相關/">
                     網站相關 <span class="right">2 篇</span></a>
                 </a>
@@ -205,6 +197,14 @@
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/網站相關/hexo/">
                     hexo <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/jquery/">
+                    jquery <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -319,7 +319,7 @@
 <hr>
 <h2 id="第一步驟：配置生產與開發環境"><a href="#第一步驟：配置生產與開發環境" class="headerlink" title="第一步驟：配置生產與開發環境"></a>第一步驟：配置生產與開發環境</h2><hr>
 <p>1.開啟webpack設定檔：</p>
-<p>在dev.env.js中配置ROOT<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;</div><div class="line">const merge = require(&apos;webpack-merge&apos;)</div><div class="line">const prodEnv = require(&apos;./prod.env&apos;)</div><div class="line"></div><div class="line">module.exports = merge(prodEnv, &#123;</div><div class="line">  NODE_ENV: &apos;&quot;development&quot;&apos;,</div><div class="line">  ROOT: &apos;&quot;http://127.0.0.1/qc-app-dev/src/api/&quot;&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>在dev.env.js中配置ROOT<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;</div><div class="line">const merge = require(&apos;webpack-merge&apos;)</div><div class="line">const prodEnv = require(&apos;./prod.env&apos;)</div><div class="line"></div><div class="line">module.exports = merge(prodEnv, &#123;</div><div class="line">  NODE_ENV: &apos;&quot;development&quot;&apos;,</div><div class="line">  ROOT: &apos;&quot;http://127.0.0.1/xxx/xxx/xxx/&quot;&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <p>在prod.env.js中配置ROOT<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;</div><div class="line">module.exports = &#123;</div><div class="line">    NODE_ENV: &apos;&quot;production&quot;&apos;</div><div class="line">    ROOT: &apos;&quot;http://你的IP/位置/&quot;&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><br></p>
 <hr>
