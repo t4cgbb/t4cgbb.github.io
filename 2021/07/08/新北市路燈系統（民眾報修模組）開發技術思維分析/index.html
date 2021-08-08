@@ -7,7 +7,7 @@
 
     
 
-    <title>作品整理</title>
+    <title>新北市路燈系統（民眾報修模組）開發技術思維分析 | 作品整理</title>
     <meta name="author" content="koala">
     
     <meta name="description" content="考拉個人作品整理">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="新北市路燈系統（民眾報修模組）開發技術思維分析"/>
     <meta property="og:site_name" content="考拉作品整理網站"/>
 
     
@@ -222,6 +222,10 @@
         <span class="breadcrumb">當前位置（分類目錄）</span>
         
             
+    
+    
+    <a class="breadcrumb" href="/categories/網站開發/">網站開發</a>
+
 
         
 
@@ -237,12 +241,12 @@
             <div class="article-title">
                 
     
-        <h1>無題</h1>
+        <h1>新北市路燈系統（民眾報修模組）開發技術思維分析</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2021-07-25T04:16:59.183Z"><a href="/googleaf53abed0a33c244.html">2021-07-25</a></time>
+            <time class="pink-link-context" datetime="2021-07-08T06:02:45.000Z"><a href="/2021/07/08/%E6%96%B0%E5%8C%97%E5%B8%82%E8%B7%AF%E7%87%88%E7%B3%BB%E7%B5%B1%EF%BC%88%E6%B0%91%E7%9C%BE%E5%A0%B1%E4%BF%AE%E6%A8%A1%E7%B5%84%EF%BC%89%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/">2021-07-08</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -250,16 +254,82 @@
 </span>
 
             
+    <div class="tags-row">
+        
+            <a href="/tags/Vue2/" class="chip pink lighten-1">Vue2</a>
+        
+            <a href="/tags/MsSQL/" class="chip pink lighten-1">MsSQL</a>
+        
+            <a href="/tags/Laravel5/" class="chip pink lighten-1">Laravel5</a>
+        
+    </div>
+
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E7%B6%B2%E7%AB%99%E9%80%A3%E7%B5%90"><span class="section table-of-contents-text">網站連結</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E7%9B%AE%E9%8C%84"><span class="section table-of-contents-text">目錄</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E4%B8%80%E3%80%81%E6%8A%80%E8%A1%93"><span class="section table-of-contents-text">一、技術</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E4%BA%8C%E3%80%81%E9%96%8B%E7%99%BC%E5%8A%9F%E8%83%BD%E7%89%B9%E8%89%B2%E4%BB%8B%E7%B4%B9"><span class="section table-of-contents-text">二、開發功能特色介紹</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%95%B4%E5%90%88%E6%96%B0%E5%8C%97%E5%B8%82%E6%9C%83%E5%93%A1%E7%B3%BB%E7%B5%B1%E4%BB%8B%E6%8E%A5"><span class="section table-of-contents-text">整合新北市會員系統介接</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E9%81%B8%E6%93%87%E5%9C%B0%E5%8D%80%E9%80%B2%E8%A1%8C%E5%AE%9A%E4%BD%8D"><span class="section table-of-contents-text">選擇地區進行定位</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E6%B8%85%E5%96%AE%E5%AE%9A%E4%BD%8D"><span class="section table-of-contents-text">清單定位</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%A0%B1%E4%BF%AE%E5%96%AE%E5%8A%9F%E8%83%BD"><span class="section table-of-contents-text">報修單功能</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E4%B8%89%E3%80%81%E8%88%87%E4%B8%89%E7%B4%9A%E5%93%81%E7%AE%A1-WebApp-%E7%9B%B8%E6%AF%94%EF%BC%8C%E9%80%B2%E6%AD%A5%E4%BA%86%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="section table-of-contents-text">三、與三級品管 WebApp 相比，進步了什麼？</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%89%8D%E7%AB%AF"><span class="section table-of-contents-text">前端</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%BE%8C%E7%AB%AF"><span class="section table-of-contents-text">後端</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E5%9B%9B%E3%80%81%E7%B5%90%E8%AB%96"><span class="section table-of-contents-text">四、結論</span></a></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                google-site-verification: googleaf53abed0a33c244.html
-                
+                <p><img src="https://imgur.com/Bfe3TIL.png"></p>
+<h2 id="網站連結"><a href="#網站連結" class="headerlink" title="網站連結"></a>網站連結</h2><p><a target="_blank" rel="noopener" href="https://streetlight.ntpc.gov.tw/SL2019/Contents_Share/FAL_Repair/#/">路燈民眾版報修網站連結</a></p>
+<h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><ul>
+<li><p>一、技術</p>
+</li>
+<li><p>二、開發功能特色介紹</p>
+</li>
+<li><p>三、與三級品管 WebApp 相比，進步了什麼？</p>
+</li>
+<li><p>四、結論</p>
+</li>
+</ul>
+<span id="more"></span>
 
+<br />
+
+<h2 id="一、技術"><a href="#一、技術" class="headerlink" title="一、技術"></a>一、技術</h2><p>前端：Vue2, Vee-validate, Vuex, Vue-router, Lodash, Leaflet, Axios, Moment.js<br>後端：Laravel5<br>環境：Apache, MsSQL<br>版控：Git</p>
+<p>備註：<br>緊急協助支援的模組，耗時約 2-3 週完善（先前已有開發過類似模組經驗，詳細請看<a href="/2021/07/08/%E4%B8%89%E7%B4%9A%E5%93%81%E7%AE%A1WebAPP%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/">三級品管 WebApp</a>），在本模組中導入 Laravel 以及更熟識 Vue 的使用。</p>
+<hr>
+<h2 id="二、開發功能特色介紹"><a href="#二、開發功能特色介紹" class="headerlink" title="二、開發功能特色介紹"></a>二、開發功能特色介紹</h2><hr>
+<h3 id="整合新北市會員系統介接"><a href="#整合新北市會員系統介接" class="headerlink" title="整合新北市會員系統介接"></a>整合新北市會員系統介接</h3><p><img src="https://imgur.com/tzoFDep.png"></p>
+<p>實踐思路：透過提供 API 方式進行整合，登入後會將 token 帶回前端（申請文件關係）若成功則可取得一般市民資料。</p>
+<hr>
+<h3 id="選擇地區進行定位"><a href="#選擇地區進行定位" class="headerlink" title="選擇地區進行定位"></a>選擇地區進行定位</h3><p><img src="https://imgur.com/zNh4Qs7.png"></p>
+<p>實踐思路：首先會透過 API 取得新北市全地區名稱，取得後點擊時取得中文名字，取得中文名字後再去請求 API，取得地區的座標，取得座標後呼叫一隻個人撰寫的定位 API（同時要判斷經緯度），並成功定位！</p>
+<hr>
+<h3 id="清單定位"><a href="#清單定位" class="headerlink" title="清單定位"></a>清單定位</h3><p><img src="https://imgur.com/RGPUrl0.png"></p>
+<p>實踐思路：後端撰寫 API，取得傳入條件，每次回傳筆數為六（初次透過 Laravel 封裝好的 function 來進行實踐），前端則是透過 Leaflet 再清單接受到 Click 指令後，去取得該項目的座標，並進行地圖的定位及彈出訊息框。</p>
+<hr>
+<h3 id="報修單功能"><a href="#報修單功能" class="headerlink" title="報修單功能"></a>報修單功能</h3><p><img src="https://imgur.com/4Q4oueW.png"></p>
+<p>實踐思路：透過 Laravel 實踐簡易的 CR 功能，API 的實踐為 Restful 的概念，前端則透過 Vue 的方向進行表單的切換與處理(MVVM)，並且整合 Leaflet 定位等功能，包含地圖縮放的大小(呈現範圍，效能考量)，以及同一筆路燈不同報修單的處理狀況等。</p>
+<hr>
+<h2 id="三、與三級品管-WebApp-相比，進步了什麼？"><a href="#三、與三級品管-WebApp-相比，進步了什麼？" class="headerlink" title="三、與三級品管 WebApp 相比，進步了什麼？"></a>三、與三級品管 WebApp 相比，進步了什麼？</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><ul>
+<li><p>Vuex 架構整合</p>
+<p><img src="https://i.imgur.com/gW6mZrj.png"></p>
+</li>
+<li><p>常用模組封裝<br><img src="https://imgur.com/MzLjnOB.png"></p>
+</li>
+</ul>
+<h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><ul>
+<li>於專案中導入 Laravel 的框架並實際運用與開發（在這之前都是原生 PHP 開發）</li>
+</ul>
+<hr>
+<h2 id="四、結論"><a href="#四、結論" class="headerlink" title="四、結論"></a>四、結論</h2><p>因為該系統我負責為一小部分的模組（報修），故將 Laravel 導了進來（現在全公司都已採用該框架），Vue 也是在這個時期逐步建立（全公司後來也同樣採用該框架，在那之前都是 Jquery），最後一個案子的系統為公共品管，詳細可至這查閱該篇文章，那是作為 RD 最後任務，結合兩大框架，並且結合 Python（爬蟲技術）所完善的案子（案子有兩個系統）。</p>
+
+                
+<p class="pink-link-context">
+    <a href="/2021/07/12/%E5%85%AC%E5%85%B1%E5%93%81%E8%B3%AA%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%A3%A7%E5%88%86%E6%9E%90/" rel="next" title="公共工程品質管理系統">
+    上一篇：公共工程品質管理系統
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2021/07/05/%E4%B8%89%E7%B4%9A%E5%93%81%E7%AE%A1WebAPP%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/" rel="next" title="三級品管WebAPP系統開發技術思維分析">
+    下一篇：三級品管WebAPP系統開發技術思維分析core
+  </a>
+</p>
 
 
             </div>
@@ -275,8 +345,8 @@
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function() {
-                this.page.url = 'http://yoursite.com/googleaf53abed0a33c244.html';
-                this.page.identifier = 'googleaf53abed0a33c244.html';
+                this.page.url = 'http://yoursite.com/2021/07/08/%E6%96%B0%E5%8C%97%E5%B8%82%E8%B7%AF%E7%87%88%E7%B3%BB%E7%B5%B1%EF%BC%88%E6%B0%91%E7%9C%BE%E5%A0%B1%E4%BF%AE%E6%A8%A1%E7%B5%84%EF%BC%89%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/';
+                this.page.identifier = '2021/07/08/新北市路燈系統（民眾報修模組）開發技術思維分析/';
             };
             (function() {
                 var d = document,
