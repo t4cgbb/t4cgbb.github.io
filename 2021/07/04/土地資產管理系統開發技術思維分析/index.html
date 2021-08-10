@@ -300,11 +300,9 @@
 <h3 id="範圍查詢"><a href="#範圍查詢" class="headerlink" title="範圍查詢"></a>範圍查詢</h3><p><img src="https://imgur.com/4GmXxEK.png" alt="筆記"></p>
 <p>實踐思路：透過 Arcgis 繪製圓圈，並取得地理位置資訊再提供參數請求 API，由 API 回傳資料，在繪製到地圖上。</p>
 <hr>
-<h2 id="三、尚需改善部分／結論"><a href="#三、尚需改善部分／結論" class="headerlink" title="三、尚需改善部分／結論"></a>三、尚需改善部分／結論</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p><a target="_blank" rel="noopener" href="https://hackmd.io/@Uo1ep--RSvyJSNP3wKQjJg/B1LVGjQ14#/">前端遇到的問題與行動方案</a></p>
-<p>下一個系統中，我研究該問題，並於 2018 年找到解法一一 Vue，爾後在三級品管 Web App 系統中，因為屬於極小的一個系統，於是我開始嘗試使用 Vue，詳細請看該篇文章。</p>
-<h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><ul>
-<li>寫法簡單，維護不易（每個 php 都 include，請求 SQL，並且直接 Return，故前端請求的每個 API 都是以.php 為主）</li>
-</ul>
+<h2 id="三、尚需改善部分／結論"><a href="#三、尚需改善部分／結論" class="headerlink" title="三、尚需改善部分／結論"></a>三、尚需改善部分／結論</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p><strong><em><a target="_blank" rel="noopener" href="https://hackmd.io/@Uo1ep--RSvyJSNP3wKQjJg/B1LVGjQ14#/">前端遇到的問題與行動方案簡報</a></em></strong></p>
+<p>爾後在三級品管 Web App 系統中，因為屬於極小的一個系統，於是我開始嘗試使用 Vue，來解決上述所遇到的問題。</p>
+<h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><p><strong>_ 寫法簡單，維護不易（每個 php 都 include，請求 SQL，並且直接 Return，故前端請求的每個 API 都是以.php 為主） _</strong></p>
 <p>未解決該問題，我在 Github 查閱大佬們寫的方法，最後嘗試自己建立 MVC（V 分離到 Vue）的架構，並封裝模組，於三級品管 Web App 系統中實踐，詳細請看該篇文章。</p>
 <h3 id="共通"><a href="#共通" class="headerlink" title="共通"></a>共通</h3><ul>
 <li>沒有版本控制，程式只能透過複製貼上檔案來進行版本恢復（因為只有一人開發，雖然方法麻煩，但尚可解決）</li>
