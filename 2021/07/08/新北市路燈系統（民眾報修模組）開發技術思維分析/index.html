@@ -287,34 +287,50 @@
 
 <br />
 
-<h2 id="一、技術"><a href="#一、技術" class="headerlink" title="一、技術"></a>一、技術</h2><p>前端：Vue2, Vee-validate, Vuex, Vue-router, Lodash, Leaflet, Axios, Moment.js<br>後端：Laravel5<br>環境：Apache, MsSQL<br>版控：Git</p>
-<p>備註：<br>緊急協助支援的模組，耗時約 2-3 週完善（先前已有開發過類似模組經驗，詳細請看<a href="/2021/07/05/%E4%B8%89%E7%B4%9A%E5%93%81%E7%AE%A1WebAPP%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/">三級品管 WebApp</a>），在本模組中導入 Laravel 以及更熟識 Vue 的使用。</p>
+<h2 id="一、技術"><a href="#一、技術" class="headerlink" title="一、技術"></a>一、技術</h2><p>前端：Vue2, Vee-validate, Vuex, Vue-router, Lodash, Leaflet, Axios, Moment.js<br>後端：Laravel5（初步導入使用），設計結構採取 Restful<br>環境：Apache, MsSQL<br>版控：Git</p>
+<p>備註：<br>緊急協助支援的開發的需需求，耗時約 2-3 週完善（先前已有開發過類似模組經驗，詳細請看<a href="/2021/07/05/%E4%B8%89%E7%B4%9A%E5%93%81%E7%AE%A1WebAPP%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/">三級品管 WebApp</a>），在本模組中導入 Laravel 以及更熟識 Vue 的使用。</p>
 <hr>
 <h2 id="二、開發功能特色介紹"><a href="#二、開發功能特色介紹" class="headerlink" title="二、開發功能特色介紹"></a>二、開發功能特色介紹</h2><hr>
 <h3 id="整合新北市會員系統介接"><a href="#整合新北市會員系統介接" class="headerlink" title="整合新北市會員系統介接"></a>整合新北市會員系統介接</h3><p><img src="https://imgur.com/tzoFDep.png"></p>
-<p>實踐思路：透過提供 API 方式進行整合，登入後會將 token 帶回前端（申請文件關係）若成功則可取得一般市民資料。</p>
+<p>實踐思路</p>
+<p>【前端】</p>
+<p>串接第三方提供 API 方式進行單一登入，第三方登入成功後，會重定向到民眾路燈報修網址，網址中會多一組 Token，由前端去確認 Token 是否有效，若有效則取回使用者的資料，讓使用者在下次報修路燈的時候不需要重複填寫自己的個人資料。</p>
 <hr>
-<h3 id="選擇地區進行定位"><a href="#選擇地區進行定位" class="headerlink" title="選擇地區進行定位"></a>選擇地區進行定位</h3><p><img src="https://imgur.com/zNh4Qs7.png"></p>
-<p>實踐思路：首先會透過 API 取得新北市全地區名稱，取得後點擊時取得中文名字，取得中文名字後再去請求 API，取得地區的座標，取得座標後呼叫一隻個人撰寫的定位 API（同時要判斷經緯度），並成功定位！</p>
+<h3 id="選擇地區進行定位"><a href="#選擇地區進行定位" class="headerlink" title="選擇地區進行定位"></a>選擇地區進行定位</h3><p><img src="https://imgur.com/B3QXJ74.gif"></p>
+<p>實踐思路：</p>
+<p>【前端】</p>
+<p>頁面載入時，首先會透過 API 取得新北市全地區名稱，點擊任一地區名字，會向 API 請求，這邊請求分成兩個部分，一個是第三方的地址資料、一個是系統中資料庫的路燈的座標資料，若有座標資料則優先定位到該區路燈位置上。</p>
+<p>【後端】</p>
+<p>地址部分針對第三方進行串接（主要方便資料格式化，可以再後端拉一個格式的 Adapter，並統一輸出格式給前端），座標部分則根據地址去查詢，若有路燈資料則回傳座標資料，沒有路燈資料回傳區域座標資料。</p>
 <hr>
 <h3 id="清單定位"><a href="#清單定位" class="headerlink" title="清單定位"></a>清單定位</h3><p><img src="https://imgur.com/RGPUrl0.png"></p>
-<p>實踐思路：後端撰寫 API，取得傳入條件，每次回傳筆數為六（初次透過 Laravel 封裝好的 function 來進行實踐），前端則是透過 Leaflet 再清單接受到 Click 指令後，去取得該項目的座標，並進行地圖的定位及彈出訊息框。</p>
+<p>實踐思路：</p>
+<p>【前端】<br>首先前端會請求後端，並載入資料，</p>
+<p>後端撰寫 API，取得傳入條件，每次回傳筆數為六（初次透過 Laravel 封裝好的 function 來進行實踐），前端則是透過 Leaflet 再清單接受到 Click 指令後，去取得該項目的座標，並進行地圖的定位及彈出訊息框。</p>
+<p>【後端】</p>
+<p>透過 Laravel 封裝好的 Pagination 進行實作，中間因為回傳的資料需要在進行格式化，所以需要在資料查詢後再透過 trasnform 方式去把需要的資料進行格式化（例如日期的格式）。</p>
 <hr>
 <h3 id="報修單功能"><a href="#報修單功能" class="headerlink" title="報修單功能"></a>報修單功能</h3><p><img src="https://imgur.com/4Q4oueW.png"></p>
-<p>實踐思路：透過 Laravel 實踐簡易的 CR 功能，API 的實踐為 Restful 的概念，前端則透過 Vue 的方向進行表單的切換與處理(MVVM)，並且整合 Leaflet 定位等功能，包含地圖縮放的大小(呈現範圍，效能考量)，以及同一筆路燈不同報修單的處理狀況等。</p>
+<p><img src="https://imgur.com/YotxfCJ.gif"></p>
+<p>實踐思路：</p>
+<p>【前端】</p>
+<p>透過 Vue 進行表單的切換與處理（主要為新增與查詢），並整合 Leaflet 定位等功能（開發時另行封裝，Client 只需呼叫 Function 即可），這邊值得一提的是，如上述 GIF 圖看到的，輸入路燈編號時，停頓 N 秒後會自動在地圖上定位，這邊透過 Lodash 的 debounce 進行實踐，定位過程需考慮到地圖縮放尺度問題（若地圖過小，打點數量過多會造成網頁卡當），以及同一筆路燈不同時間點報修要如何查詢的問題。</p>
+<p>【後端】<br>Laravel 實現查詢與新增功能，首先是前端參數傳入時會透過 Validator 進行判斷是否傳入正確的數值，若無問題則新增或查詢，其中這邊回傳的值都開始進行封裝，例如會有 Code、Status、Data，封裝概念來自於《現代 PHP：新的特點及良好習慣》一書學後的實踐。</p>
 <hr>
 <h2 id="三、與三級品管-WebApp-相比，進步了什麼？"><a href="#三、與三級品管-WebApp-相比，進步了什麼？" class="headerlink" title="三、與三級品管 WebApp 相比，進步了什麼？"></a>三、與三級品管 WebApp 相比，進步了什麼？</h2><h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><ul>
 <li><p>Vuex 架構整合</p>
 <p><img src="https://i.imgur.com/gW6mZrj.png"></p>
 </li>
-<li><p>常用模組封裝<br><img src="https://imgur.com/MzLjnOB.png"></p>
+<li><p>常用模組封裝<br><img src="https://imgur.com/pZhis9O.png"></p>
 </li>
 </ul>
 <h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><ul>
-<li>於專案中導入 Laravel 的框架並實際運用與開發（在這之前都是原生 PHP 開發）</li>
+<li>於專案中導入 Laravel 的框架並實際運用與開發（在這之前都是原生 PHP 進行開發，有許多輪子需要自己造，例如　額外自行封裝 SQL 的 PDO（否則可能引發 XSS 等問題））</li>
 </ul>
 <hr>
-<h2 id="四、結論"><a href="#四、結論" class="headerlink" title="四、結論"></a>四、結論</h2><p>因為該系統我負責為一小部分的模組（報修），故將 Laravel 導了進來（現在全公司都已採用該框架），Vue 也是在這個時期逐步建立（全公司後來也同樣採用該框架，在那之前都是 Jquery），最後一個案子的系統為公共品管，詳細可至這查閱該篇文章，那是作為 RD 最後任務，結合兩大框架，並且結合 Python（爬蟲技術）所完善的案子（案子有兩個系統）。</p>
+<h2 id="四、結論"><a href="#四、結論" class="headerlink" title="四、結論"></a>四、結論</h2><p>這個系統我負責功能部分較小，故嘗試將 Laravel 導入（現在全公司基本都採用該框架開發），Vue 也是在這個時期逐步建立（全公司後來所有專案也同樣都採用該框架，在那之前都是 Jquery；並且整合 Leaflet 這套地圖的利器，在那之前都是 Arcgis.js，詳細可參考<a href="2021/07/04/%E5%9C%9F%E5%9C%B0%E8%B3%87%E7%94%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/">土地資產管理系統開發一文</a>。</p>
+<p>接下來是我接手的最後一個系統一一公共工程品質管理系統。</p>
+<p>完美結合兩大框架，實現前後端分離，並同時因應需求透過 Python 開發爬蟲，以排程方式定期取得資料至資料庫，最終完善的案子（該案共有兩個系統），詳細請看下一篇！</p>
 
                 
 <p class="pink-link-context">
