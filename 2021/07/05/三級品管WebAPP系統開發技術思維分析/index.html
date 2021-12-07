@@ -294,22 +294,27 @@
 <h2 id="二、開發功能特色介紹"><a href="#二、開發功能特色介紹" class="headerlink" title="二、開發功能特色介紹"></a>二、開發功能特色介紹</h2><hr>
 <h3 id="流程圖點擊（公開的-SOP-流程圖系統化）"><a href="#流程圖點擊（公開的-SOP-流程圖系統化）" class="headerlink" title="流程圖點擊（公開的 SOP 流程圖系統化）"></a>流程圖點擊（公開的 SOP 流程圖系統化）</h3><p><img src="https://imgur.com/7tlXbyF.png"></p>
 <p>實踐思路</p>
-<p>【前端】：<br>功能十分簡單，不過因為是第一次實踐，所以特別寫下來，主要透過<map><area coords="座標">去實踐 Router 的跳轉。</p>
+<p>【前端】</p>
+<p>功能十分簡單，不過因為是第一次實踐，所以特別寫下來，主要透過<map><area coords="座標">去實踐 Router 的跳轉。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;map name =&quot;imgMap&quot; id=&quot;imgMap&quot;&gt;</span><br><span class="line">  &lt;area shape=&quot;rect&quot; coords=&quot;11, 485, 230, 537&quot; @click=&quot;Jump&quot;&gt;</span><br><span class="line">&lt;/map&gt;</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h3 id="群集功能"><a href="#群集功能" class="headerlink" title="群集功能"></a>群集功能</h3><p><img src="https://imgur.com/kDAotVf.png"></p>
 <p>實踐思路</p>
-<p>【前端】：<br>透過<a target="_blank" rel="noopener" href="https://github.com/Leaflet/Leaflet.markercluster">Leaflet.markercluster</a>實踐群集功能，主要目的是為了避免打點過多造成移動時瀏覽器效能的下降，這邊較為複雜的實踐主要是清單與地圖的交互，例如用戶點擊清單資料時，可以自動跳轉到地圖的某一個點上，前端部分需要去設立一個 id，並在 Array 中進行查找，時間複雜度約為 BigO(N)。</p>
+<p>【前端】</p>
+<p>透過<a target="_blank" rel="noopener" href="https://github.com/Leaflet/Leaflet.markercluster">Leaflet.markercluster</a>實踐群集功能，主要目的是為了避免打點過多造成移動時瀏覽器效能的下降，這邊較為複雜的實踐主要是清單與地圖的交互，例如用戶點擊清單資料時，可以自動跳轉到地圖的某一個點上，前端部分需要去設立一個 id，並在 Array 中進行查找，時間複雜度約為 BigO(N)。</p>
 <hr>
 <h3 id="電子簽名"><a href="#電子簽名" class="headerlink" title="電子簽名"></a>電子簽名</h3><p><img src="https://imgur.com/z9lrZR0.png"></p>
 <p>實踐思路</p>
-<p>【前端】透過 vueSignature 實踐電子簽名，再透過前端把簽名轉化成 Jpg 圖檔，轉成 Base64 編碼後發給後端 API</p>
-<p>【後端】收到 Base64 後，透過 php 的 base64_decode 進行解碼，並用 file_put_contents 將文件儲存至特定位置。</p>
+<p>【前端】</p>
+<p>透過 vueSignature 實踐電子簽名，再透過前端把簽名轉化成 Jpg 圖檔，轉成 Base64 編碼後發給後端 API</p>
+<p>【後端】</p>
+<p>收到 Base64 後，透過 php 的 base64_decode 進行解碼，並用 file_put_contents 將文件儲存至特定位置。</p>
 <hr>
 <h3 id="獲取手機座標進行定位"><a href="#獲取手機座標進行定位" class="headerlink" title="獲取手機座標進行定位"></a>獲取手機座標進行定位</h3><p><img src="https://i.imgur.com/QRxHcRQ.png"></p>
 <p>實踐思路</p>
-<p>【前端】透過 Leaflet 的 Locate 方法進行定位，若定位失敗會觸發 Locationerror，再針對失敗的狀態碼及訊息進行提醒及處理。</p>
+<p>【前端】</p>
+<p>透過 Leaflet 的 Locate 方法進行定位，若定位失敗會觸發 Locationerror，再針對失敗的狀態碼及訊息進行提醒及處理。</p>
 <hr>
 <h2 id="三、與土地資產管理系統相比，改善？"><a href="#三、與土地資產管理系統相比，改善？" class="headerlink" title="三、與土地資產管理系統相比，改善？"></a>三、與土地資產管理系統相比，改善？</h2><p><a href="/2021/07/04/%E5%9C%9F%E5%9C%B0%E8%B3%87%E7%94%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/">該系統發生的問題詳細可查閱該篇</a></p>
 <h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><ul>
