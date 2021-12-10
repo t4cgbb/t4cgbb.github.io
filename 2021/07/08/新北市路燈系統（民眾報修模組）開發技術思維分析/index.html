@@ -311,8 +311,7 @@
 <p>【後端】</p>
 <p>透過 Laravel 封裝好的 Pagination 進行實作，中間因為回傳的資料需要在進行格式化，所以需要在資料查詢後再透過 trasnform 方式去把需要的資料進行格式化（例如日期的格式）。</p>
 <hr>
-<h3 id="報修單功能"><a href="#報修單功能" class="headerlink" title="報修單功能"></a>報修單功能</h3><p><img src="https://imgur.com/4Q4oueW.png"></p>
-<p><img src="https://imgur.com/YotxfCJ.gif"></p>
+<h3 id="報修單功能"><a href="#報修單功能" class="headerlink" title="報修單功能"></a>報修單功能</h3><p><img src="https://imgur.com/YotxfCJ.gif"></p>
 <p>實踐思路：</p>
 <p>【前端】</p>
 <p>透過 Vue 進行表單的切換與處理（主要為新增與查詢），並整合 Leaflet 定位等功能（開發時另行封裝，Client 只需呼叫 Function 即可），這邊值得一提的是，如上述 GIF 圖看到的，輸入路燈編號時，停頓 N 秒後會自動在地圖上定位，這邊透過 Lodash 的 debounce 進行實踐，定位過程需考慮到地圖縮放尺度問題（若地圖過小，打點數量過多會造成網頁卡當），以及同一筆路燈不同時間點報修要如何查詢的問題。</p>
