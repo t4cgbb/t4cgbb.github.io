@@ -295,7 +295,7 @@
 
 
             <div class="entry pink-link-context">
-                <p><img src="https://imgur.com/Bfe3TIL.png"></p>
+                <p><img src="https://i.imgur.com/Bfe3TIL.png"></p>
 <h2 id="網站連結"><a href="#網站連結" class="headerlink" title="網站連結"></a>網站連結</h2><p><a target="_blank" rel="noopener" href="https://streetlight.ntpc.gov.tw/SL2019/Contents_Share/FAL_Repair/#/">路燈民眾版報修網站連結</a></p>
 <h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><ul>
 <li><p>一、技術</p>
@@ -315,19 +315,19 @@
 <p>備註：<br>緊急協助支援的開發的需需求，耗時約 2-3 週完善（先前已有開發過類似模組經驗，詳細請看<a href="/2021/07/05/%E4%B8%89%E7%B4%9A%E5%93%81%E7%AE%A1WebAPP%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%8A%80%E8%A1%93%E6%80%9D%E7%B6%AD%E5%88%86%E6%9E%90/">三級品管 WebApp</a>），在本模組中導入 Laravel 以及更熟識 Vue 的使用。</p>
 <hr>
 <h2 id="二、開發功能特色介紹"><a href="#二、開發功能特色介紹" class="headerlink" title="二、開發功能特色介紹"></a>二、開發功能特色介紹</h2><hr>
-<h3 id="整合新北市會員系統介接"><a href="#整合新北市會員系統介接" class="headerlink" title="整合新北市會員系統介接"></a>整合新北市會員系統介接</h3><p><img src="https://imgur.com/tzoFDep.png"></p>
+<h3 id="整合新北市會員系統介接"><a href="#整合新北市會員系統介接" class="headerlink" title="整合新北市會員系統介接"></a>整合新北市會員系統介接</h3><p><img src="https://i.imgur.com/tzoFDep.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>串接第三方提供 API 方式進行單一登入，第三方登入成功後，會重定向到民眾路燈報修網址，網址中會多一組 Token，由前端去確認 Token 是否有效，若有效則取回使用者的資料，讓使用者在下次報修路燈的時候不需要重複填寫自己的個人資料。</p>
 <hr>
-<h3 id="選擇地區進行定位"><a href="#選擇地區進行定位" class="headerlink" title="選擇地區進行定位"></a>選擇地區進行定位</h3><p><img src="https://imgur.com/B3QXJ74.gif"></p>
+<h3 id="選擇地區進行定位"><a href="#選擇地區進行定位" class="headerlink" title="選擇地區進行定位"></a>選擇地區進行定位</h3><p><img src="https://i.imgur.com/B3QXJ74.gif"></p>
 <p>實踐思路：</p>
 <p>【前端】</p>
 <p>頁面載入時，首先會透過 API 取得新北市全地區名稱，點擊任一地區名字，會向 API 請求，這邊請求分成兩個部分，一個是第三方的地址資料、一個是系統中資料庫的路燈的座標資料，若有座標資料則優先定位到該區路燈位置上。</p>
 <p>【後端】</p>
 <p>地址部分針對第三方進行串接（主要方便資料格式化，可以再後端拉一個格式的 Adapter，並統一輸出格式給前端），座標部分則根據地址去查詢，若有路燈資料則回傳座標資料，沒有路燈資料回傳區域座標資料。</p>
 <hr>
-<h3 id="清單定位"><a href="#清單定位" class="headerlink" title="清單定位"></a>清單定位</h3><p><img src="https://imgur.com/RGPUrl0.png"></p>
+<h3 id="清單定位"><a href="#清單定位" class="headerlink" title="清單定位"></a>清單定位</h3><p><img src="https://i.imgur.com/RGPUrl0.png"></p>
 <p>實踐思路：</p>
 <p>【前端】</p>
 <p>首先前端會請求後端，並載入資料，</p>
@@ -335,7 +335,7 @@
 <p>【後端】</p>
 <p>透過 Laravel 封裝好的 Pagination 進行實作，中間因為回傳的資料需要在進行格式化，所以需要在資料查詢後再透過 trasnform 方式去把需要的資料進行格式化（例如日期的格式）。</p>
 <hr>
-<h3 id="報修單功能"><a href="#報修單功能" class="headerlink" title="報修單功能"></a>報修單功能</h3><p><img src="https://imgur.com/YotxfCJ.gif"></p>
+<h3 id="報修單功能"><a href="#報修單功能" class="headerlink" title="報修單功能"></a>報修單功能</h3><p><img src="https://i.imgur.com/YotxfCJ.gif"></p>
 <p>實踐思路：</p>
 <p>【前端】</p>
 <p>透過 Vue 進行表單的切換與處理（主要為新增與查詢），並整合 Leaflet 定位等功能（開發時另行封裝，Client 只需呼叫 Function 即可），這邊值得一提的是，如上述 GIF 圖看到的，輸入路燈編號時，停頓 N 秒後會自動在地圖上定位，這邊透過 Lodash 的 debounce 進行實踐，定位過程需考慮到地圖縮放尺度問題（若地圖過小，打點數量過多會造成網頁卡當），以及同一筆路燈不同時間點報修要如何查詢的問題。</p>
@@ -346,7 +346,7 @@
 <li><p>Vuex 架構整合</p>
 <p><img src="https://i.imgur.com/gW6mZrj.png"></p>
 </li>
-<li><p>常用模組封裝<br><img src="https://imgur.com/pZhis9O.png"></p>
+<li><p>常用模組封裝<br><img src="https://i.imgur.com/pZhis9O.png"></p>
 </li>
 </ul>
 <h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><ul>

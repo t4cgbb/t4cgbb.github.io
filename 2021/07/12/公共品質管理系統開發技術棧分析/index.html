@@ -295,7 +295,7 @@
 
 
             <div class="entry pink-link-context">
-                <p><img src="https://imgur.com/uM6QVfp.png"></p>
+                <p><img src="https://i.imgur.com/uM6QVfp.png"></p>
 <h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><ul>
 <li><p>一、技術</p>
 </li>
@@ -322,7 +322,7 @@
 <li>要注意同時間不要大量請求，以免被封鎖 IP，還需要聯繫對方已便恢復。</li>
 </ol>
 <hr>
-<h3 id="透過-JWT-實踐登入"><a href="#透過-JWT-實踐登入" class="headerlink" title="透過 JWT 實踐登入"></a>透過 JWT 實踐登入</h3><p><img src="https://imgur.com/oyjWOFn.png"></p>
+<h3 id="透過-JWT-實踐登入"><a href="#透過-JWT-實踐登入" class="headerlink" title="透過 JWT 實踐登入"></a>透過 JWT 實踐登入</h3><p><img src="https://i.imgur.com/oyjWOFn.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>前端負責接 Token，這邊採用 Axios，並且可以寫一個 js 去封裝 Axios，裡面透過 Interceptors 去設定 Headers 永遠會代 Token，並且在每次請求時前端只需要關注參數即可，若 Token 失效則請求無效並且頁面登出。</p>
@@ -330,33 +330,33 @@
 <p>專案過往使用 PHP 的 Session 來紀錄使用者的登錄資訊，本系統我選擇實踐 JWT 方式來 完成驗證，會選擇 JWT 這個技術是因為（一）可以減少伺服器記憶體存取的負擔（二）可以在 Payload 中保存一些使用者的基本資料，方便前端直接取用（三）有發認證信的需求。</p>
 <p>該專案主要使用 <a target="_blank" rel="noopener" href="https://github.com/tymondesigns/jwt-auth">Jwt-auth</a> 來完成該驗證功能。</p>
 <hr>
-<h3 id="行事曆功能"><a href="#行事曆功能" class="headerlink" title="行事曆功能"></a>行事曆功能</h3><p><img src="https://imgur.com/P9sIMNX.png"></p>
+<h3 id="行事曆功能"><a href="#行事曆功能" class="headerlink" title="行事曆功能"></a>行事曆功能</h3><p><img src="https://i.imgur.com/P9sIMNX.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>針對 Github 撰寫的 Snow-calendar 進行實踐，但比較值得一提的是裡面有一些功能是沒有的，例如顏色的選擇等，故後來個人有拆解該原始碼去進行修正（<a target="_blank" rel="noopener" href="https://github.com/t4cgbb/snow-calendar/commit/0aeff2553a2839b80b0fd083d90cc42478bb5567#diff-44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3">詳細點我</a>）</p>
-<p><img src="https://imgur.com/6ay6TN8.png"></p>
+<p><img src="https://i.imgur.com/6ay6TN8.png"></p>
 <hr>
-<h3 id="統計圖表實踐"><a href="#統計圖表實踐" class="headerlink" title="統計圖表實踐"></a>統計圖表實踐</h3><p><img src="https://imgur.com/L7JHDmw.png"></p>
+<h3 id="統計圖表實踐"><a href="#統計圖表實踐" class="headerlink" title="統計圖表實踐"></a>統計圖表實踐</h3><p><img src="https://i.imgur.com/L7JHDmw.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>透過 v-charts 實踐各種圖表以及下載，這邊僅部分，圖表類型至少十種以上（包含單純表格的統計亦有）</p>
 <hr>
-<h3 id="權限管理設計"><a href="#權限管理設計" class="headerlink" title="權限管理設計"></a>權限管理設計</h3><p><img src="https://imgur.com/MsdEvNp.png"></p>
+<h3 id="權限管理設計"><a href="#權限管理設計" class="headerlink" title="權限管理設計"></a>權限管理設計</h3><p><img src="https://i.imgur.com/MsdEvNp.png"></p>
 <p>實踐思路：</p>
 <p>【後端】</p>
 <p>系統從 ACL（Access Control List）一路進步到 RBAC（Role-Based Access Control）的設計，上圖便是單一角色的權限設計，前端透過登入成功取得後端給予的 Token，前端在透過 Token 呼叫後端權限的 API，後端將回傳最新的權限配置一覽，讓前端進行設定。</p>
 <hr>
-<h3 id="查核人員推薦功能"><a href="#查核人員推薦功能" class="headerlink" title="查核人員推薦功能"></a>查核人員推薦功能</h3><p><img src="https://imgur.com/hRiwnhf.png"><br>實踐思路：</p>
+<h3 id="查核人員推薦功能"><a href="#查核人員推薦功能" class="headerlink" title="查核人員推薦功能"></a>查核人員推薦功能</h3><p><img src="https://i.imgur.com/hRiwnhf.png"><br>實踐思路：</p>
 <p>【後端】</p>
 <p>該部分是該系統最複雜的區塊，主要集中在後端，首先要透過名稱（這邊由客戶給予關鍵字）去進行專長匹配，並且匹配過程中有包含主要專長及次要專長，以及不能同時存在的人等，整個功能最後做出來會有點類似 AI（實際上不是 AI，也沒有自主學習的功能，還是由程式去進行大量的判斷），然後進行人員的推薦。</p>
 <p>並且為了完成這個功能，也在 DB 端先行創建好數張 View 表（否則程式會寫很多的 Where Join 可讀性差…），以便順利進行開發！</p>
 <hr>
-<h3 id="查詢與即時運算"><a href="#查詢與即時運算" class="headerlink" title="查詢與即時運算"></a>查詢與即時運算</h3><p><img src="https://imgur.com/j6p0578.png"></p>
+<h3 id="查詢與即時運算"><a href="#查詢與即時運算" class="headerlink" title="查詢與即時運算"></a>查詢與即時運算</h3><p><img src="https://i.imgur.com/j6p0578.png"></p>
 <p>實踐思路：</p>
 <p>【後端】</p>
 <p>這部分列出來是因為如圖紅框，當設定很多條件後，系統會自動算出權重分數，原本是打算每次查詢時就進行即時的運算，後來因效能及頻率考量與規劃，改至會分成手動與排程兩種權重計算，並存在另外一張表再透過關聯的方式去產出查詢資料。</p>
 <hr>
-<h3 id="報名功能模組"><a href="#報名功能模組" class="headerlink" title="報名功能模組"></a>報名功能模組</h3><p><img src="https://imgur.com/GmvWUe3.png"></p>
+<h3 id="報名功能模組"><a href="#報名功能模組" class="headerlink" title="報名功能模組"></a>報名功能模組</h3><p><img src="https://i.imgur.com/GmvWUe3.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>上圖中左下部分，透過 Vee-validate 實踐 Key in 時如不符合格式會跳出訊息提醒使用者（這個設計符合 Jakob Nielsen 十大原則中的預防性錯誤）。</p>

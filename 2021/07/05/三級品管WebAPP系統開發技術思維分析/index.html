@@ -297,7 +297,7 @@
 
 
             <div class="entry pink-link-context">
-                <p><img src="https://imgur.com/OyyhpBw.png" alt="宣傳"><br><strong>(個人透過 Mockplus 繪製 Prototype，並與主管討論客戶需求與確認開發項目)</strong></p>
+                <p><img src="https://i.imgur.com/OyyhpBw.png" alt="宣傳"><br><strong>(個人透過 Mockplus 繪製 Prototype，並與主管討論客戶需求與確認開發項目)</strong></p>
 <h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><ul>
 <li><p>一、技術</p>
 </li>
@@ -313,29 +313,29 @@
 <br />
 
 <h2 id="一、技術"><a href="#一、技術" class="headerlink" title="一、技術"></a>一、技術</h2><p>前端：HTML5, CSS3, Vue2-leaflet, leaflet.markercluster（初步導入 Vue 使用，但主要建立在 UI Framework 上）<br>UI 框架：framework7<br>後端：PHP<br>環境：Apache, MsSQL<br>版控：Git（初步導入使用）</p>
-<p>備註：<br>同為土地系統開發案額外拓增的新需求項目。<br>初期主要研究要思考 <a target="_blank" rel="noopener" href="https://imgur.com/fmgCKW4.png">Native vs Hybird vs Web App 三者間的衡量</a>；中後期則主要核心放在實踐新技術，看看是否能解決土地資產管理系統開發上的痛點（詳細可以去看那篇文章的說明）</p>
+<p>備註：<br>同為土地系統開發案額外拓增的新需求項目。<br>初期主要研究要思考 <a target="_blank" rel="noopener" href="https://i.imgur.com/fmgCKW4.png">Native vs Hybird vs Web App 三者間的衡量</a>；中後期則主要核心放在實踐新技術，看看是否能解決土地資產管理系統開發上的痛點（詳細可以去看那篇文章的說明）</p>
 <hr>
 <h2 id="二、開發功能特色介紹"><a href="#二、開發功能特色介紹" class="headerlink" title="二、開發功能特色介紹"></a>二、開發功能特色介紹</h2><hr>
-<h3 id="流程圖點擊（公開的-SOP-流程圖系統化）"><a href="#流程圖點擊（公開的-SOP-流程圖系統化）" class="headerlink" title="流程圖點擊（公開的 SOP 流程圖系統化）"></a>流程圖點擊（公開的 SOP 流程圖系統化）</h3><p><img src="https://imgur.com/7tlXbyF.png"></p>
+<h3 id="流程圖點擊（公開的-SOP-流程圖系統化）"><a href="#流程圖點擊（公開的-SOP-流程圖系統化）" class="headerlink" title="流程圖點擊（公開的 SOP 流程圖系統化）"></a>流程圖點擊（公開的 SOP 流程圖系統化）</h3><p><img src="https://i.imgur.com/7tlXbyF.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>功能十分簡單，不過因為是第一次實踐，所以特別寫下來，主要透過<map><area coords="座標">去實踐 Router 的跳轉。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;map name =&quot;imgMap&quot; id=&quot;imgMap&quot;&gt;</span><br><span class="line">  &lt;area shape=&quot;rect&quot; coords=&quot;11, 485, 230, 537&quot; @click=&quot;Jump&quot;&gt;</span><br><span class="line">&lt;/map&gt;</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="群集功能"><a href="#群集功能" class="headerlink" title="群集功能"></a>群集功能</h3><p><img src="https://imgur.com/kDAotVf.png"></p>
+<h3 id="群集功能"><a href="#群集功能" class="headerlink" title="群集功能"></a>群集功能</h3><p><img src="https://i.imgur.com/kDAotVf.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>透過<a target="_blank" rel="noopener" href="https://github.com/Leaflet/Leaflet.markercluster">Leaflet.markercluster</a>實踐群集功能，主要目的是為了避免打點過多造成移動時瀏覽器效能的下降，這邊較為複雜的實踐主要是清單與地圖的交互，例如用戶點擊清單資料時，可以自動跳轉到地圖的某一個點上，前端部分需要去設立一個 id，並在 Array 中進行查找，時間複雜度約為 BigO(N)。</p>
 <hr>
-<h3 id="電子簽名"><a href="#電子簽名" class="headerlink" title="電子簽名"></a>電子簽名</h3><p><img src="https://imgur.com/z9lrZR0.png"></p>
+<h3 id="電子簽名"><a href="#電子簽名" class="headerlink" title="電子簽名"></a>電子簽名</h3><p><img src="https://i.imgur.com/z9lrZR0.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>透過 vueSignature 實踐電子簽名，再透過前端把簽名轉化成 Jpg 圖檔，轉成 Base64 編碼後發給後端 API</p>
 <p>【後端】</p>
 <p>收到 Base64 後，透過 php 的 base64_decode 進行解碼，並用 file_put_contents 將文件儲存至特定位置。</p>
 <hr>
-<h3 id="獲取手機座標進行定位"><a href="#獲取手機座標進行定位" class="headerlink" title="獲取手機座標進行定位"></a>獲取手機座標進行定位</h3><p><img src="https://i.imgur.com/QRxHcRQ.png"></p>
+<h3 id="獲取手機座標進行定位"><a href="#獲取手機座標進行定位" class="headerlink" title="獲取手機座標進行定位"></a>獲取手機座標進行定位</h3><p><img src="https://i.i.imgur.com/QRxHcRQ.png"></p>
 <p>實踐思路</p>
 <p>【前端】</p>
 <p>透過 Leaflet 的 Locate 方法進行定位，若定位失敗會觸發 Locationerror，再針對失敗的狀態碼及訊息進行提醒及處理。</p>
@@ -344,13 +344,13 @@
 <h3 id="後端"><a href="#後端" class="headerlink" title="後端"></a>後端</h3><ul>
 <li>使用 Namespace，並遵循 PSR1, 2, 4 規範。</li>
 <li>使用 OOP 開發程式</li>
-<li>導入 Composer 管理後端套件包 並使用 Autoload（而不是大量的 Include）<br><img src="https://imgur.com/QcTq1pW.png"></li>
+<li>導入 Composer 管理後端套件包 並使用 Autoload（而不是大量的 Include）<br><img src="https://i.imgur.com/QcTq1pW.png"></li>
 <li>建立類似 MVC 的架構（統一入口，而不是各個請求對應一支 PHP，會寫「類似」是因為前後端分離，故沒有 V）</li>
 </ul>
 <p>改善前（每隻 PHP 互相獨立，彼此透過 Include 互相引用，難以維護與擴充）</p>
-<p><img src="https://imgur.com/uZGJs6O.png"></p>
+<p><img src="https://i.imgur.com/uZGJs6O.png"></p>
 <p>改善後</p>
-<p><img src="https://imgur.com/OrVWTnM.png"></p>
+<p><img src="https://i.imgur.com/OrVWTnM.png"></p>
 <hr>
 <h2 id="四、結論"><a href="#四、結論" class="headerlink" title="四、結論"></a>四、結論</h2><p>這邊已經初步建立起架構，接著在路燈管理系統（民眾報修）中會針對 Vue 進一步運用，並且在後端首次開始導入 Laravel 的框架，歡迎至我的下一篇章查閱！</p>
 

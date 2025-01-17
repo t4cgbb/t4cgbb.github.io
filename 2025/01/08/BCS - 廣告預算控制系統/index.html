@@ -335,9 +335,9 @@
 </ul>
 <br/>
 
-<p><img src="https://imgur.com/x473qGQ.png"></p>
-<p><img src="https://imgur.com/aQT1ml6.png"></p>
-<p><img src="https://imgur.com/knTq29w.png"></p>
+<p><img src="https://i.imgur.com/x473qGQ.png"></p>
+<p><img src="https://i.imgur.com/aQT1ml6.png"></p>
+<p><img src="https://i.imgur.com/knTq29w.png"></p>
 <hr>
 <h2 id="三、技術詳細說明（流量預測、Pacing）"><a href="#三、技術詳細說明（流量預測、Pacing）" class="headerlink" title="三、技術詳細說明（流量預測、Pacing）"></a>三、技術詳細說明（流量預測、Pacing）</h2><p>BCS <strong>從 0 開始構建，作為控制廣告預算走速的核心系統</strong>，需要<strong>確保高可用及高穩定</strong>，否則會影響廣告投遞的<strong>目標流量可能未達標或超額，無論哪一種都會導致公司虧損</strong>。</p>
 <hr>
@@ -346,8 +346,8 @@
 <h3 id="1-每日流量的預測："><a href="#1-每日流量的預測：" class="headerlink" title="1. 每日流量的預測："></a>1. 每日流量的預測：</h3><p>從 BigQuery 取得資料後，接下來<strong>進行資料特徵工程</strong>，會<strong>針對每一個 廣告單元 的流量的24小時進行預測</strong>，同時需要分出週一到週日，因為平日與週末的流量以及顛峰時段的流量都會有所不同。</p>
 <p>有些 廣告單元 因為<strong>資料不夠，無法進行預測</strong>，這邊則會選擇其它處理方式，例如以過往特定期間區間的平均，或者挪移到其它廣告單元來進行投遞（不預測這些廣告單元流量）。</p>
 <p>預測的<strong>模型選擇隨機森林</strong>，預測方式初步參考「scikit-learn algorithm cheat-sheet」這張圖表，爾後微調，在<strong>流量大的廣告單元中，準確率可達85%以上</strong>，<strong>解決先前廣告投遞選擇 ASAP 的問題（廣告會在一天開始時迅速把流量投放完畢）</strong>。</p>
-<p><img src="https://imgur.com/QYyZ6ty.png"></p>
-<p><img src="https://imgur.com/yNIY8Aq.png"></p>
+<p><img src="https://i.imgur.com/QYyZ6ty.png"></p>
+<p><img src="https://i.imgur.com/yNIY8Aq.png"></p>
 <hr>
 <br/>
 
@@ -355,13 +355,13 @@
 <p>Pacing 每分鐘執行/次（Pacing 論文的建議最佳值），<strong>每次執行 Pacing 時都會計算出 PTR（Pass Through Rate, 求通過率）。</strong></p>
 <p><strong>PTR 會根據當前版位廣告曝光量來提高 或 降低</strong>，增高代表該則廣告的曝光率提高，反之亦然，舉例來說我已經計算出本日廣告曝光量需要滿足10,000，我需要投遞在指定期間的12小時內，則每小時投遞曝光量需要 833 個曝光量，假設第一個小時第1分鐘曝光量為0，則 PTR 在下一分鐘增加。</p>
 <p>當 第30分鐘時，曝光量已達 833，則 PTR 降低，直到歸0意味著不再曝光，多餘的曝光量會在下一次重新計算。</p>
-<p><img src="https://imgur.com/zl1AdfQ.png"></p>
+<p><img src="https://i.imgur.com/zl1AdfQ.png"></p>
 <hr>
 <br/>
 
 <h3 id="3-環境配置"><a href="#3-環境配置" class="headerlink" title="3. 環境配置"></a>3. 環境配置</h3><p>透過 <strong>Dockerfiles 進行配置</strong>，nginx 設置反向代理到指定的 port 服務上。</p>
 <p>Dockerfiles 處理 Run 指令，例如需要設定時區（TZ=Asia/Taipei）統一時區，同時部署對應環境。</p>
-<p><img src="https://imgur.com/jjrfV2v.png"></p>
+<p><img src="https://i.imgur.com/jjrfV2v.png"></p>
 <br/>
                 
 <p class="pink-link-context">

@@ -297,7 +297,7 @@
 
 
             <div class="entry pink-link-context">
-                <p><img src="https://imgur.com/BhbVGIX.png" alt="宣傳"></p>
+                <p><img src="https://i.imgur.com/BhbVGIX.png" alt="宣傳"></p>
 <h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><ul>
 <li><p>一、技術</p>
 </li>
@@ -314,19 +314,19 @@
 <p>備註：<br>第一次接手開發的系統案，分為兩期，第一期為開發進度約 1/3 時接手處理，直至第二期處理前後端（主要負責 JS，CSS 部分被切出去）過程中接觸包含介接 SSO、寄信及 GIS 等相關功能之開發。</p>
 <hr>
 <h2 id="二、開發功能特色介紹"><a href="#二、開發功能特色介紹" class="headerlink" title="二、開發功能特色介紹"></a>二、開發功能特色介紹</h2><hr>
-<h3 id="圖層套疊"><a href="#圖層套疊" class="headerlink" title="圖層套疊"></a>圖層套疊</h3><p><img src="https://imgur.com/Y0iUOn9.png" alt="圖層套疊"></p>
+<h3 id="圖層套疊"><a href="#圖層套疊" class="headerlink" title="圖層套疊"></a>圖層套疊</h3><p><img src="https://i.imgur.com/Y0iUOn9.png" alt="圖層套疊"></p>
 <p>實踐思路：圖層為市府提供 API，透過 Arcgis.js 的 TileMapServiceLayer、DynamicMapService 實踐在網頁上顯示地圖。</p>
-<p>在實踐這個技術時，個人有去查閱 Arcgis 的書籍，以下為簡易輸出的筆記。<br><img src="https://imgur.com/0zm1pS1.png" alt="筆記"></p>
+<p>在實踐這個技術時，個人有去查閱 Arcgis 的書籍，以下為簡易輸出的筆記。<br><img src="https://i.imgur.com/0zm1pS1.png" alt="筆記"></p>
 <hr>
-<h3 id="主題圖套疊"><a href="#主題圖套疊" class="headerlink" title="主題圖套疊"></a>主題圖套疊</h3><p><img src="https://imgur.com/2gulkfI.png"></p>
+<h3 id="主題圖套疊"><a href="#主題圖套疊" class="headerlink" title="主題圖套疊"></a>主題圖套疊</h3><p><img src="https://i.imgur.com/2gulkfI.png"></p>
 <p>實踐思路：前端透過 API 取得圖層資料後，透過篩選比對條件，當條件成功則渲染地圖，其中最大的難點在於效能，效能問題採 OpenLayers 的 BBOX 策略（只獲取當前地圖範圍內數據），避免同一時段傳回十萬筆以上資料要進行比對，讓前端畫面卡住。</p>
-<p>（參考 Web GIS，下圖為個人輸出知識點）<br><img src="https://i.imgur.com/nTV2zzR.png" alt="筆記2"></p>
+<p>（參考 Web GIS，下圖為個人輸出知識點）<br><img src="https://i.i.imgur.com/nTV2zzR.png" alt="筆記2"></p>
 <hr>
-<h3 id="範圍查詢"><a href="#範圍查詢" class="headerlink" title="範圍查詢"></a>範圍查詢</h3><p><img src="https://imgur.com/4GmXxEK.png" alt="筆記"></p>
+<h3 id="範圍查詢"><a href="#範圍查詢" class="headerlink" title="範圍查詢"></a>範圍查詢</h3><p><img src="https://i.imgur.com/4GmXxEK.png" alt="筆記"></p>
 <p>實踐思路：前端透過 Arcgis.js 繪製圓圈，取得地理位置資訊（格式為點座標（格式：TWD97 經緯度）及半徑）後回傳後端，後端透過使用 SQL 地理空間資訊查詢的方式，去取得點座標半徑內相關的圖層資料並回傳，最終由前端繪製到地圖上。</p>
 <hr>
 <h2 id="三、尚需改善部分／結論"><a href="#三、尚需改善部分／結論" class="headerlink" title="三、尚需改善部分／結論"></a>三、尚需改善部分／結論</h2><h3 id="【前端】"><a href="#【前端】" class="headerlink" title="【前端】"></a>【前端】</h3><p><strong><em><a target="_blank" rel="noopener" href="https://hackmd.io/@Uo1ep--RSvyJSNP3wKQjJg/B1LVGjQ14#/">前端遇到的問題與行動方案簡報</a></em></strong></p>
-<p><img src="https://i.imgur.com/YGqF6iM.png" alt="簡報"></p>
+<p><img src="https://i.i.imgur.com/YGqF6iM.png" alt="簡報"></p>
 <p>爾後在三級品管 Web App 系統中，因為屬於極小的一個系統，於是我開始在專案中導入 Vue，來解決上述所遇到的問題。</p>
 <h3 id="【後端】"><a href="#【後端】" class="headerlink" title="【後端】"></a>【後端】</h3><p><strong>_ 寫法簡單，維護不易（每個 php 都 include，請求 SQL，並且直接 Return，故前端請求的每個 API 都是以.php 為主） _</strong></p>
 <p>為了解決該問題，我在 Github 查閱大佬們寫的方法，最後嘗試自己建立 MVC（V 分離到 Vue）的架構，並封裝模組，於三級品管 Web App 系統中實踐，詳細請看該篇文章。</p>
